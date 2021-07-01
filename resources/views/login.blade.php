@@ -17,7 +17,7 @@
 
     <title>BPS DIP</title>
 </head>
-<body class="bg-gradient-primary">
+<body style="background-color: #00004d">
     <div class="container mt-3">
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -26,7 +26,7 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-image: url({{ asset('assets/img/login.jpg') }});"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-image: url({{ asset('assets/img/tes.jpg') }});"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center mt-3">
@@ -34,7 +34,7 @@
                                         <p>Digital Input Paper</p>
                                     </div>
 
-                                    <form class="form user my-5" method="POST" action="">
+                                    <form class="form user my-5" method="POST" action="/dashboard">
                                         {{ csrf_field() }}
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"

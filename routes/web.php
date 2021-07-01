@@ -25,6 +25,14 @@ Route::get('/suratMasuk', function () {
     return view('suratMasuk');
 });
 
+Route::get('/editSuratMasuk', function () {
+    return view('editSuratMasuk');
+});
+
 Route::get('/daftarSurat', function () {
     return view('daftarSurat');
+});
+
+Route::get('/cetak', function () {
+    return view('cetak');
 });
