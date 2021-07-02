@@ -94,6 +94,13 @@ p2 {
     color: black;
     font-size: 12px;
 }
+
+p3 {
+    /* Reset the margin so that the text starts and ends at the expected marks */
+    margin: 0;
+    color: black;
+    font-size: 8px;
+}
 /* For links in the document */
 a {
     /* Prevent colorization or decoration */
@@ -147,7 +154,7 @@ table {
 
     /* Reflect the actual page margin/padding on paper in the screen rendering (must match margin from @page rule) */
     padding-left: 1cm;
-    padding-top: 1cm;
+    padding-top: 0.5cm;
     padding-right: 1cm;
     padding-bottom: 0.5cm;
 }

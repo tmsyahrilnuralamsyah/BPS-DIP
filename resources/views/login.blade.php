@@ -17,7 +17,7 @@
 
     <title>BPS DIP</title>
 </head>
-<body style="background-color: #00004d">
+<body style="background-color: #00004d; background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(38, 38, 168) 100%);">
     <div class="container mt-3">
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -26,7 +26,7 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-image: url({{ asset('assets/img/tes.jpg') }});"></div>
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-image: url({{ asset('assets/img/login.jpg') }});"></div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center mt-3">

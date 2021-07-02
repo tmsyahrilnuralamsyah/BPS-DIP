@@ -66,13 +66,13 @@
         <div class="form-group">
             <label>Disposisi</label><br>
             <div class="ml-3">
-                <input type="radio" id="disposisi" name="disposisi" value="kabagUmum"/> KABAG UMUM <br>
-                <input type="radio" id="disposisi" name="disposisi" value="koorSosial"/> Koordinator Fungsi STAT. SOSIAL <br>
-                <input type="radio" id="disposisi" name="disposisi" value="koorProduksi"/> Koordinator Fungsi STAT. PRODUKSI <br>
-                <input type="radio" id="disposisi" name="disposisi" value="koorDistribusi"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
-                <input type="radio" id="disposisi" name="disposisi" value="koorCawilis"/> Koordinator Fungsi CAWILIS <br>
-                <input type="radio" id="disposisi" name="disposisi" value="koorIpds"/> Koordinator Fungsi IPDS <br>
-                <input type="radio" id="disposisi" name="disposisi" value="korpri"/> KORPRI <br>
+                <input type="checkbox" id="disposisi" name="disposisi" value="kabagUmum"/> KABAG UMUM <br>
+                <input type="checkbox" id="disposisi" name="disposisi" value="koorSosial"/> Koordinator Fungsi STAT. SOSIAL <br>
+                <input type="checkbox" id="disposisi" name="disposisi" value="koorProduksi"/> Koordinator Fungsi STAT. PRODUKSI <br>
+                <input type="checkbox" id="disposisi" name="disposisi" value="koorDistribusi"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
+                <input type="checkbox" id="disposisi" name="disposisi" value="koorCawilis"/> Koordinator Fungsi CAWILIS <br>
+                <input type="checkbox" id="disposisi" name="disposisi" value="koorIpds"/> Koordinator Fungsi IPDS <br>
+                <input type="checkbox" id="disposisi" name="disposisi" value="korpri"/> KORPRI <br>
             </div>
             @if($errors->has('disposisi'))
                 <div class="text-danger">

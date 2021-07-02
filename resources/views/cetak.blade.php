@@ -34,7 +34,7 @@
                 <div class="row justify-content-center">
                     <h6><b>PROVINSI ACEH</b></h6>
                 </div>
-                <div class="row justify-content-center mt-2">
+                <div class="row justify-content-center">
                     <h4><b><u>LEMBARAN DISPOSISI</u></b></h4>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="row mt-3">
+        <div class="row">
             <p><b>1. SURAT DARI</b></p>
         </div>
         <div class="row ml-1">
@@ -65,7 +65,7 @@
             <p2>:</p2>
         </div>
 
-        <div class="row mt-2">
+        <div class="row mt-1">
             <p><b>2. KODE INDEK UMUM</b></p>
         </div>
         <div class="row ml-1">
@@ -84,12 +84,12 @@
             </div>
             <div class="col-5">
                 <div class="border border-dark">
-                    <p2 class="mr-5">Paraf Petugas</p2>
+                    <p2 class="ml-1">Paraf Petugas :</p2>
                 </div>
             </div>
         </div>
 
-        <div class="row mt-2">
+        <div class="row mt-1">
             <p><b>3. DISPOSISI KEPALA KEPADA :</b></p>
         </div>
         <div class="row">
@@ -117,37 +117,132 @@
                 </div>
             </div>
             <div class="col">
-                <div class="border border-dark">
-                    <div class="row ml-3">
-                        <div class="col-6">
-                            <div class="row">
-                                <p2>Harap diproses</p2>
-                            </div>
-                            <div class="row">
-                                <p2>Penuhi maksud surat</p2>
-                            </div>
-                            <div class="row">
-                                <p2>Harap dijawab</p2>
-                            </div>
+                <div class="row">
+                    <div class="col-1">
+                        <div class="row mt-1">
+                            <input type="checkbox" id="disposisi" name="disposisi" value="kabagUmum"/>
                         </div>
-                        <div class="col">
-                            <div class="row">
-                                <p2>Periksa kebenarannya</p2>
-                            </div>
-                            <div class="row">
-                                <p2>Teruskan pada ybs.</p2>
-                            </div>
-                            <div class="row">
-                                <p2>Untuk dimaklumi</p2>
-                            </div>
+                        <div class="row mt-1">
+                            <input type="checkbox" id="disposisi" name="disposisi" value="koorSosial"/>
+                        </div>
+                        <div class="row mt-1">
+                            <input type="checkbox" id="disposisi" name="disposisi" value="koorProduksi"/>
+                        </div>
+                        <div class="row mt-1">
+                            <input type="checkbox" id="disposisi" name="disposisi" value="koorDistribusi"/>
+                        </div>
+                        <div class="row mt-1">
+                            <input type="checkbox" id="disposisi" name="disposisi" value="koorCawilis"/>
+                        </div>
+                        <div class="row mt-1">
+                            <input type="checkbox" id="disposisi" name="disposisi" value="koorIpds"/>
+                        </div>
+                        <div class="row mt-1">
+                            <input type="checkbox" id="disposisi" name="disposisi" value="korpri"/>
                         </div>
                     </div>
-                    <p2 class="ml-2">Catatan :</p2>
-                    <div class="mt-5 d-flex flex-row-reverse mr-5">
-                        <p2>Paraf/Tgl</p2>
+                    <div class="col">
+                        <div class="border border-dark">
+                            <div class="row ml-1">
+                                <div class="col-6">
+                                    <div class="row">
+                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="hp"/>
+                                        <p2>Harap diproses</p2>
+                                    </div>
+                                    <div class="row">
+                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="pms"/>
+                                        <p2>Penuhi maksud surat</p2>
+                                    </div>
+                                    <div class="row">
+                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="hj"/>
+                                        <p2>Harap dijawab</p2>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="pk"/>
+                                        <p2>Periksa kebenarannya</p2>
+                                    </div>
+                                    <div class="row">
+                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="tpy"/>
+                                        <p2>Teruskan pada ybs.</p2>
+                                    </div>
+                                    <div class="row">
+                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="um"/>
+                                        <p2>Untuk dimaklumi</p2>
+                                    </div>
+                                </div>
+                            </div>
+                            <p2 class="ml-2">Catatan :</p2>
+                            <div class="mt-4 d-flex flex-row-reverse mr-5">
+                                <p2>Paraf/Tgl</p2>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="row mt-1">
+            <p><b>4. DISPOSISI KABAG/KOOR</b></p>
+        </div>
+        <P2 class="ml-1">KEPADA</P2>
+        <div class="border border-dark ml-1">
+            <p2 class="ml-2">Catatan :</p2>
+            <div class="mt-3 d-flex flex-row-reverse mr-5">
+                <p2>Paraf/Tgl</p2>
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <p><b>5. DISPOSISI KASUBAG/KOOR</b></p>
+        </div>
+        <div class="border border-dark ml-1">
+            <p2 class="ml-2">Catatan :</p2>
+            <div class="mt-3 d-flex flex-row-reverse mr-5">
+                <p2>Paraf/Tgl</p2>
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <div class="col-3">
+                <p2><b>KODE INDEK</b></p2>
+            </div>
+            <p2><b>:</b></p2>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <p2>Nomor</p2>
+            </div>
+            <p2>:</p2>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <p2>Tanggal</p2>
+            </div>
+            <p2>:</p2>
+            <div class="col">
+
+            </div>
+            <div class="col-5">
+                <div class="border border-dark">
+                    <p2 class="ml-1">Paraf Petugas :</p2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-1">
+            <p2>Jl. Tgk. H. M. Daud Beureueh No. 50 Telp. (0651) 23005 fax. 33632</p2>
+        </div>
+        <div class="row">
+            <p2>e-mail : bps1100@bps.go.id</p2>
+        </div>
+
+        <div class="row justify-content-center mt-1">
+            <p3><i>Bersama kita tunjukan integritas !!</i></p3>
+        </div>
+        <div class="row justify-content-center">
+            <p3><i>No Korupsi !! No Gratifikasi !!</i></p3>
         </div>
     </div>
 </body>
