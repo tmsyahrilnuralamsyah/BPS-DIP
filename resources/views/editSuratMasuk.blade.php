@@ -64,21 +64,50 @@
         </div>
 
         <div class="form-group">
-            <label>Disposisi</label><br>
-            <div class="ml-3">
-                <input type="checkbox" id="disposisi" name="disposisi" value="kabagUmum"/> KABAG UMUM <br>
-                <input type="checkbox" id="disposisi" name="disposisi" value="koorSosial"/> Koordinator Fungsi STAT. SOSIAL <br>
-                <input type="checkbox" id="disposisi" name="disposisi" value="koorProduksi"/> Koordinator Fungsi STAT. PRODUKSI <br>
-                <input type="checkbox" id="disposisi" name="disposisi" value="koorDistribusi"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
-                <input type="checkbox" id="disposisi" name="disposisi" value="koorCawilis"/> Koordinator Fungsi CAWILIS <br>
-                <input type="checkbox" id="disposisi" name="disposisi" value="koorIpds"/> Koordinator Fungsi IPDS <br>
-                <input type="checkbox" id="disposisi" name="disposisi" value="korpri"/> KORPRI <br>
-            </div>
-            @if($errors->has('disposisi'))
-                <div class="text-danger">
-                    {{ $errors->first('disposisi')}}
+            <div class="row">
+                <div class="col-4">
+                    <label>Disposisi</label><br>
+                    <div class="ml-3">
+                        <input type="checkbox" id="disposisi" name="disposisi" value="kabagUmum"/> KABAG UMUM <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="koorSosial"/> Koordinator Fungsi STAT. SOSIAL <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="koorProduksi"/> Koordinator Fungsi STAT. PRODUKSI <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="koorDistribusi"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="koorCawilis"/> Koordinator Fungsi CAWILIS <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="koorIpds"/> Koordinator Fungsi IPDS <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="korpri"/> KORPRI <br>
+                    </div>
+                    @if($errors->has('disposisi'))
+                        <div class="text-danger">
+                            {{ $errors->first('disposisi')}}
+                        </div>
+                    @endif
                 </div>
-            @endif
+                <div class="col-3">
+                    <label>Keterangan Disposisi</label><br>
+                    <div class="ml-3">
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="hp"/> Harap diproses <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="pms"/> Penuhi maksud surat <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="hj"/> Harap dijawab <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="pk"/> Periksa kebenarannya <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="tpy"/> Teruskan pada ybs. <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="um"/> Untuk dimaklumi <br>
+                    </div>
+                    @if($errors->has('ketDisposisi'))
+                        <div class="text-danger">
+                            {{ $errors->first('disposisi')}}
+                        </div>
+                    @endif
+                </div>
+                <div class="col">
+                    <label>Disposisi KABAG/Koordinator Fungsi</label>
+                    <textarea type="textarea" name="noteDisposisi" class="form-control"></textarea>
+                    @if($errors->has('noteDisposisi'))
+                        <div class="text-danger">
+                            {{ $errors->first('noteDisposisi')}}
+                        </div>
+                    @endif
+                </div>
+            </div>
         </div>
 
         <div class="form-group">

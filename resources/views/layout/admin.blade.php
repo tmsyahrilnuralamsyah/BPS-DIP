@@ -48,14 +48,26 @@
 
                 <li class="nav-item active">
                     <a class="nav-link" href="/suratMasuk">
-                        <i class="fas fa-fw fa-folder"></i>
+                        <i class="fas fa-fw fa-envelope"></i>
                         <span>Surat Masuk</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/daftarSurat">
+                    <a class="nav-link" href="/daftarSuratMasuk">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Daftar Surat Masuk</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/suratKeluar">
+                        <i class="fas fa-fw fa-envelope-open"></i>
+                        <span>Surat Keluar</span></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="/daftarSuratKeluar">
                         <i class="fas fa-fw fa-folder-open"></i>
-                        <span>Daftar Surat</span></a>
+                        <span>Daftar Surat Keluar</span></a>
                 </li>
 
             <!-- Divider -->

@@ -146,29 +146,29 @@
                             <div class="row ml-1">
                                 <div class="col-6">
                                     <div class="row">
-                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="hp"/>
+                                        <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="hp"/>
                                         <p2>Harap diproses</p2>
                                     </div>
                                     <div class="row">
-                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="pms"/>
+                                        <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="pms"/>
                                         <p2>Penuhi maksud surat</p2>
                                     </div>
                                     <div class="row">
-                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="hj"/>
+                                        <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="hj"/>
                                         <p2>Harap dijawab</p2>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="row">
-                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="pk"/>
+                                        <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="pk"/>
                                         <p2>Periksa kebenarannya</p2>
                                     </div>
                                     <div class="row">
-                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="tpy"/>
+                                        <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="tpy"/>
                                         <p2>Teruskan pada ybs.</p2>
                                     </div>
                                     <div class="row">
-                                        <input type="checkbox" class="mt-1 mr-1" id="disposisi" name="disposisi" value="um"/>
+                                        <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="um"/>
                                         <p2>Untuk dimaklumi</p2>
                                     </div>
                                 </div>
