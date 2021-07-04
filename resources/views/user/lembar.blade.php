@@ -88,7 +88,7 @@
 
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-xl-4 col-lg-12 col-md-12">
                             <label>Disposisi</label><br>
                             <div class="ml-3">
                                 <input type="checkbox" id="disposisi" name="disposisi" value="kabagUmum"/> KABAG UMUM <br>
@@ -105,7 +105,7 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="col-3">
+                        <div class="col-xl-3 col-lg-12 col-md-12">
                             <label>Keterangan Disposisi</label><br>
                             <div class="ml-3">
                                 <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="hp"/> Harap diproses <br>
