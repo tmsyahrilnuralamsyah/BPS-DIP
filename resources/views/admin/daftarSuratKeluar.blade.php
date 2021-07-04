@@ -28,7 +28,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr class="text-center">
-                        <th>Aksi</th>
+                        <th>Ubah/Hapus</th>
                         <th>Nomor Terturut</th>
                         <th>Isi Ringkas</th>
                         <th>Alamat</th>
