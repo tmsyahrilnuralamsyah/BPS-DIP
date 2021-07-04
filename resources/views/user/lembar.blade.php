@@ -88,9 +88,9 @@
 
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-12 col-md-12">
+                        <div class="col-xl-5 col-lg-12 col-md-12">
                             <label>Disposisi</label><br>
-                            <div class="ml-3">
+                            <div class="border border-dark ml-3 p-2">
                                 <input type="checkbox" id="disposisi" name="disposisi" value="kabagUmum"/> KABAG UMUM <br>
                                 <input type="checkbox" id="disposisi" name="disposisi" value="koorSosial"/> Koordinator Fungsi STAT. SOSIAL <br>
                                 <input type="checkbox" id="disposisi" name="disposisi" value="koorProduksi"/> Koordinator Fungsi STAT. PRODUKSI <br>
@@ -105,9 +105,9 @@
                                 </div>
                             @endif
                         </div>
-                        <div class="col-xl-3 col-lg-12 col-md-12">
+                        <div class="col-xl-5 col-lg-12 col-md-12">
                             <label>Keterangan Disposisi</label><br>
-                            <div class="ml-3">
+                            <div class="border border-dark ml-3 p-2">
                                 <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="hp"/> Harap diproses <br>
                                 <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="pms"/> Penuhi maksud surat <br>
                                 <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="hj"/> Harap dijawab <br>
