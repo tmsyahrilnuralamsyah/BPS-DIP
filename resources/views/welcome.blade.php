@@ -18,14 +18,15 @@
     <title>BPS DIP</title>
 </head>
 <body style="background-color: #00004d; background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(38, 38, 168) 100%);">
-    <div class="container mt-3">
+    <div class="container mt-4">
         <!-- Outer Row -->
         <div class="row justify-content-center">
             <div class="col-xl-10 col-lg-12 col-md-9">
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
-                        <div class="text-center mt-5 mx-5">
-                            <h2 class="text-gray-900 font-weight-bold mb-4">Selamat Datang di BPS DIP</h2>
+                        <div class="text-center mx-5">
+                            <img src="{{ asset('assets/img/bps.svg') }}" style="width: 100px;" class="mt-5" alt="">
+                            <h2 class="text-gray-900 font-weight-bold mb-4 mt-2">Selamat Datang di BPS DIP</h2>
                             <p>BPS DIP merupakan sebuah website yang bertujuan untuk mendata proses surat masuk dan surat keluar pada BPS Provinsi Aceh</p>
                         </div>
                         <div class="text-center p-5">
