@@ -41,31 +41,31 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="/dashboard">
+                    <a class="nav-link" href="/admin/dashboard">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/suratMasuk">
+                    <a class="nav-link" href="/admin/suratMasuk">
                         <i class="fas fa-fw fa-envelope"></i>
                         <span>Surat Masuk</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/daftarSuratMasuk">
+                    <a class="nav-link" href="/admin/daftarSuratMasuk">
                         <i class="fas fa-fw fa-folder"></i>
                         <span>Daftar Surat Masuk</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/suratKeluar">
+                    <a class="nav-link" href="/admin/suratKeluar">
                         <i class="fas fa-fw fa-envelope-open"></i>
                         <span>Surat Keluar</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/daftarSuratKeluar">
+                    <a class="nav-link" href="/admin/daftarSuratKeluar">
                         <i class="fas fa-fw fa-folder-open"></i>
                         <span>Daftar Surat Keluar</span></a>
                 </li>
@@ -73,7 +73,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item active">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/admin/login">
                     <i class="fas fa-fw"></i>
                     <span>Logout</span></a>
             </li>

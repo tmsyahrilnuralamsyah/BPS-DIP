@@ -27,8 +27,8 @@
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <tr>
-                        <th class="text-center">Aksi</th>
+                    <tr class="text-center">
+                        <th>Aksi</th>
                         <th>Nomor Terturut</th>
                         <th>Isi Ringkas</th>
                         <th>Alamat</th>
@@ -39,10 +39,10 @@
                 <tbody>
                     <tr>
                         <td class="text-center">
-                            <a href="/editSuratKeluar" class="btn btn-warning my-1">Edit</a>
+                            <a href="/admin/editSuratKeluar" class="btn btn-warning my-1">Ubah</a>
                             <a href="#" class="btn btn-danger my-1">Hapus</a>
                         </td>
-                        <td><a href="/cetak" style="color: blue">111111111</a></td>
+                        <td>111111111</td>
                         <td>permintaan data</td>
                         <td>BPS Kota Langsa</td>
                         <td>11-11-21</td>

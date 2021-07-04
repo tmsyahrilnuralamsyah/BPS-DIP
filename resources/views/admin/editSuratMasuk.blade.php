@@ -6,7 +6,7 @@
     <h1 class="h3 mb-0 text-gray-800">Edit Surat Masuk</h1>
 </div>
 
-<div class="card o-hidden border-0 shadow-lg">
+<div class="card o-hidden border-0 shadow-lg mb-4">
     <form class="form user m-5" method="POST" action="">
         {{ csrf_field() }}
         <div class="alert alert-success" role="alert">
@@ -15,10 +15,10 @@
 
         <div class="form-group">
             <label>Nomor Terturut</label>
-            <input type="text" name="noT" class="form-control">
-            @if($errors->has('noT'))
+            <input type="text" name="noTm" class="form-control">
+            @if($errors->has('noTm'))
                 <div class="text-danger">
-                    {{ $errors->first('noT')}}
+                    {{ $errors->first('noTm')}}
                 </div>
             @endif
         </div>
@@ -35,30 +35,40 @@
 
         <div class="form-group">
             <label>Nomor</label>
-            <input type="text" name="no" class="form-control">
-            @if($errors->has('no'))
+            <input type="text" name="noSm" class="form-control">
+            @if($errors->has('noSm'))
                 <div class="text-danger">
-                    {{ $errors->first('no')}}
+                    {{ $errors->first('noSm')}}
                 </div>
             @endif
         </div>
 
         <div class="form-group">
             <label>Tanggal</label>
-            <input type="date" name="tanggal" class="form-control">
-            @if($errors->has('tanggal'))
+            <input type="date" name="tanggalSm" class="form-control">
+            @if($errors->has('tanggalSm'))
                 <div class="text-danger">
-                    {{ $errors->first('tanggal')}}
+                    {{ $errors->first('tanggalSm')}}
                 </div>
             @endif
         </div>
 
         <div class="form-group">
             <label>Isi Ringkas</label>
-            <textarea type="textarea" name="ringkas" class="form-control"></textarea>
-            @if($errors->has('ringkas'))
+            <textarea type="textarea" name="ringkasM" class="form-control"></textarea>
+            @if($errors->has('ringkasM'))
                 <div class="text-danger">
-                    {{ $errors->first('ringkas')}}
+                    {{ $errors->first('ringkasM')}}
+                </div>
+            @endif
+        </div>
+
+        <div class="form-group">
+            <label>Tanggal Diterima</label>
+            <input type="date" name="tanggalDiterima" class="form-control">
+            @if($errors->has('tanggalDiterima'))
+                <div class="text-danger">
+                    {{ $errors->first('tanggalDiterima')}}
                 </div>
             @endif
         </div>
@@ -94,16 +104,7 @@
                     </div>
                     @if($errors->has('ketDisposisi'))
                         <div class="text-danger">
-                            {{ $errors->first('disposisi')}}
-                        </div>
-                    @endif
-                </div>
-                <div class="col">
-                    <label>Disposisi KABAG/Koordinator Fungsi</label>
-                    <textarea type="textarea" name="noteDisposisi" class="form-control"></textarea>
-                    @if($errors->has('noteDisposisi'))
-                        <div class="text-danger">
-                            {{ $errors->first('noteDisposisi')}}
+                            {{ $errors->first('ketDisposisi')}}
                         </div>
                     @endif
                 </div>

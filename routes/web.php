@@ -14,37 +14,49 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/admin/login', function () {
+    return view('admin.login');
 });
 
-Route::get('/suratMasuk', function () {
-    return view('suratMasuk');
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
 });
 
-Route::get('/daftarSuratMasuk', function () {
-    return view('daftarSuratMasuk');
+Route::get('/admin/suratMasuk', function () {
+    return view('admin.suratMasuk');
 });
 
-Route::get('/editSuratMasuk', function () {
-    return view('editSuratMasuk');
+Route::get('/admin/daftarSuratMasuk', function () {
+    return view('admin.daftarSuratMasuk');
 });
 
-Route::get('/suratKeluar', function () {
-    return view('suratKeluar');
+Route::get('/admin/editSuratMasuk', function () {
+    return view('admin.editSuratMasuk');
 });
 
-Route::get('/daftarSuratKeluar', function () {
-    return view('daftarSuratKeluar');
+Route::get('/admin/suratKeluar', function () {
+    return view('admin.suratKeluar');
 });
 
-Route::get('/editSuratKeluar', function () {
-    return view('editSuratKeluar');
+Route::get('/admin/daftarSuratKeluar', function () {
+    return view('admin.daftarSuratKeluar');
 });
 
-Route::get('/cetak', function () {
-    return view('cetak');
+Route::get('/admin/editSuratKeluar', function () {
+    return view('admin.editSuratKeluar');
+});
+
+Route::get('/admin/cetak', function () {
+    return view('admin.cetak');
+});
+
+Route::get('/user/login', function () {
+    return view('user.login');
+});
+
+Route::get('/user/lembar', function () {
+    return view('user.lembar');
 });

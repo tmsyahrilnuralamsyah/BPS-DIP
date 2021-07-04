@@ -21,7 +21,7 @@
     <div class="container mt-3">
         <!-- Outer Row -->
         <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="col-xl-10 col-lg-12 col-md-9 my-4">
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
@@ -30,14 +30,13 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center mt-3">
-                                        <h1 class="h4 text-gray-900 font-weight-bold mb-4">Welcome in BPS DIP!</h1>
-                                        <p>Digital Input Paper</p>
+                                        <h1 class="h4 text-gray-900 font-weight-bold mb-4">Login BPS DIP!</h1>
                                     </div>
 
                                     <form class="form user my-5" method="POST" action="/dashboard">
                                         {{ csrf_field() }}
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
+                                            <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" name="username" aria-describedby="emailHelp"
                                                 placeholder="Username">
                                         </div>

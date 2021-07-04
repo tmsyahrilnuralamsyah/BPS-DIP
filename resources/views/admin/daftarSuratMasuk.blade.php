@@ -24,33 +24,41 @@
     </div>
 
     <div class="card-body">
-        <div class="table-responsive">
+        <div class="table-responsive" style="overflow-x: scroll;">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <tr>
-                        <th class="text-center">Aksi</th>
-                        <th>Nomor Terturut</th>
-                        <th>Pengirim</th>
-                        <th>Nomor</th>
-                        <th>Tanggal</th>
-                        <th>Isi Ringkas</th>
-                        <th>Disposisi</th>
+                    <tr class="text-center">
+                        <th class="px-5">Aksi</th>
+                        <th class="px-5">Nomor Terturut</th>
+                        <th class="px-5">Pengirim</th>
+                        <th class="px-5">Nomor</th>
+                        <th class="px-4">Tanggal Surat</th>
+                        <th class="px-5">Isi Ringkas</th>
+                        <th class="px-4">Tanggal Diterima</th>
+                        <th class="px-5">Disposisi</th>
+                        <th class="px-5">Keterangan Disposisi</th>
+                        <th class="px-5">Disposisi KABAG/KOOR</th>
+                        <th class="px-5">Disposisi KASUBAG/KOOR</th>
+                        <th class="px-4">Kode Admin</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="text-center">
-                            <a href="/editSuratMasuk" class="btn btn-warning my-1">Edit</a>
+                            <a href="/admin/editSuratMasuk" class="btn btn-warning my-1">Ubah</a>
                             <a href="#" class="btn btn-danger my-1">Hapus</a>
                         </td>
-                        <td><a href="/cetak" style="color: blue">111111111</a></td>
+                        <td><a href="/cetak" style="color: blue" download>111111111</a></td>
                         <td>BPS Kota Langsa</td>
                         <td>1111111111</td>
                         <td>11-11-21</td>
                         <td>permintaan data</td>
-                        <td class="text-center">
-                            KABAG UMUM
-                        </td>
+                        <td>15-11-21</td>
+                        <td>KABAG UMUM</td>
+                        <td>alalalalalala</td>
+                        <td>dajahfaka</td>
+                        <td>kahfkafaka</td>
+                        <td>kKAnda2</td>
                     </tr>
                 </tbody>
             </table>
