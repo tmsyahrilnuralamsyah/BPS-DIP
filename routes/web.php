@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,25 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin/login', function () {
-    return view('admin.login');
-});
+Route::get('/admin/login', [BookController::class, 'login']);
+Route::get('/admin/dashboard', [BookController::class, 'dashboard']);
+Route::get('/admin/daftarSuratMasuk', [BookController::class, 'daftarSuratMasuk']);
+Route::get('/admin/suratMasuk', [BookController::class, 'suratMasuk']);
+Route::post('/admin/tambahSuratMasuk', [BookController::class, 'tambahSuratMasuk']);
+Route::get('/admin/editSuratMasuk/{id}', [BookController::class, 'editSuratMasuk']);
+Route::put('/admin/editSuratMasuk/{id}', [BookController::class, 'editSuratMasuk2']);
+Route::get('/admin/hapusSuratMasuk/{id}', [BookController::class, 'hapusSuratMasuk']);
+Route::get('/admin/daftarSuratMasuk/cari', [BookController::class, 'cariSuratMasuk']);
 
-Route::get('/admin/dashboard', function () {
-    return view('admin.dashboard');
-});
 
-Route::get('/admin/suratMasuk', function () {
-    return view('admin.suratMasuk');
-});
-
-Route::get('/admin/daftarSuratMasuk', function () {
-    return view('admin.daftarSuratMasuk');
-});
-
-Route::get('/admin/editSuratMasuk', function () {
-    return view('admin.editSuratMasuk');
-});
 
 Route::get('/admin/suratKeluar', function () {
     return view('admin.suratKeluar');

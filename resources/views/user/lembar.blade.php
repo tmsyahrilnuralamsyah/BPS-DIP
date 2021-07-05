@@ -136,7 +136,7 @@
 
                 <div class="form-group">
                     <label>Disposisi KASUBAG/Koordinator Fungsi</label>
-                    <textarea type="textarea" name="catDisposisi2" class="form-control" disabled></textarea>
+                    <textarea type="textarea" name="catDisposisi2" class="form-control"></textarea>
                     @if($errors->has('catDisposisi2'))
                         <div class="text-danger">
                             {{ $errors->first('catDisposisi2')}}

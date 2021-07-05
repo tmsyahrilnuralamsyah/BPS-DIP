@@ -10,9 +10,10 @@
 <div class="card shadow mb-4">
     <div class="card-header py-2">
         <!-- Topbar Search -->
-        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="/admin/daftarSuratMasuk/cari" method="get">
+            {{ csrf_field() }}
             <div class="input-group">
-                <input type="text" class="form-control bg-white border-0 small" placeholder="Search..."
+                <input type="text" name="cari" class="form-control bg-white border-0 small" placeholder="Search..."
                     aria-label="Search" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="button">
@@ -32,9 +33,9 @@
                         <th class="px-5">Nomor Terturut</th>
                         <th class="px-5">Pengirim</th>
                         <th class="px-5">Nomor</th>
-                        <th class="px-4">Tanggal Surat</th>
+                        <th class="px-5">Tanggal Surat</th>
                         <th class="px-5">Isi Ringkas</th>
-                        <th class="px-4">Tanggal Diterima</th>
+                        <th class="px-5">Tanggal Diterima</th>
                         <th class="px-5">Disposisi</th>
                         <th class="px-5">Keterangan Disposisi</th>
                         <th class="px-5">Disposisi KABAG/KOOR</th>
@@ -43,23 +44,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="text-center">
-                            <a href="/admin/editSuratMasuk" class="btn btn-warning my-1">Ubah</a>
-                            <a href="#" class="btn btn-danger my-1">Hapus</a>
-                        </td>
-                        <td><a href="/cetak" style="color: blue" download>111111111</a></td>
-                        <td>BPS Kota Langsa</td>
-                        <td>1111111111</td>
-                        <td>11-11-21</td>
-                        <td>permintaan data</td>
-                        <td>15-11-21</td>
-                        <td>KABAG UMUM</td>
-                        <td>alalalalalala</td>
-                        <td>dajahfaka</td>
-                        <td>kahfkafaka</td>
-                        <td>kKAnda2</td>
-                    </tr>
+                    @foreach($books as $b)
+                        <tr>
+                            <td class="text-center">
+                                <a href="/admin/editSuratMasuk/{{ $b->id }}" class="btn btn-warning my-1">Ubah</a>
+                                <a href="/admin/hapusSuratMasuk/{{ $b->id }}" class="btn btn-danger my-1">Hapus</a>
+                            </td>
+                            <td><a href="/cetak" style="color: blue" download>{{ $b->noTm }}</a></td>
+                            <td>{{ $b->pengirim }}</td>
+                            <td>{{ $b->noSm }}</td>
+                            <td>{{ $b->tanggalSm }}</td>
+                            <td>{{ $b->ringkasM }}</td>
+                            <td>{{ $b->tanggalDiterima }}</td>
+                            <td>{{ $b->disposisi }}</td>
+                            <td>{{ $b->ketDisposisi }}</td>
+                            <td>{{ $b->catDisposisi }}</td>
+                            <td>{{ $b->catDisposisi2 }}</td>
+                            <td>{{ $b->kode }}</td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

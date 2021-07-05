@@ -7,7 +7,7 @@
 </div>
 
 <div class="card o-hidden border-0 shadow-lg mb-4">
-    <form class="form user m-5" method="POST" action="">
+    <form class="form user m-5" method="post" action="/admin/tambahSuratMasuk">
         {{ csrf_field() }}
         <div class="alert alert-success" role="alert">
             Data telah tersimpan
@@ -73,8 +73,18 @@
             @endif
         </div>
 
+        <div class="form-group">
+            <label>Kode Admin</label>
+            <input type="text" name="kode" class="form-control">
+            @if($errors->has('kode'))
+                <div class="text-danger">
+                    {{ $errors->first('kode')}}
+                </div>
+            @endif
+        </div>
+
         <div class="d-flex flex-row-reverse mt-3">
-            <button type="submit" class="btn btn-primary col-xl-2">Simpan</button>
+            <button type="submit" name="submit" class="btn btn-primary col-xl-2">Simpan</button>
         </div>
     </form>
 </div>
