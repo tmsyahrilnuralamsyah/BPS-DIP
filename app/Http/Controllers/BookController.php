@@ -8,16 +8,6 @@ use App\Models\Book;
 
 class BookController extends Controller
 {
-    public function login()
-    {
-        return view('admin.login');
-    }
-
-    public function dashboard()
-    {
-        return view('admin.dashboard');
-    }
-
     public function daftarSuratMasuk()
     {
     	$book = Book::all();
@@ -107,5 +97,11 @@ class BookController extends Controller
         $cari = $request->cari;
 		$book = DB::table('books')->where('noTm','like',"%".$cari."%")->paginate();
 		return view('admin.daftarSuratMasuk',['books' => $book]);
+    }
+
+    public function cetakSuratMasuk($id)
+    {
+        $book = Book::find($id);
+        return view('admin.editSuratMasuk', ['books' => $book]);
     }
 }

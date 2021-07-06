@@ -16,17 +16,17 @@ class BookSeeder extends Seeder
     {
         // insert data ke table books
         DB::table('books')->insert([
-        	'noTm' => 'Joni',
-        	'pengirim' => 'Web Designer',
-        	'noSm' => 25,
-        	'tanggalSm' => '25-01-2021',
-        	'ringkasM' => 'kadaldala',
-        	'tanggalDiterima' => '21-01-2021',
-        	'disposisi' => 'kdahdkahda',
+        	'noTm' => '115120797',
+        	'pengirim' => 'BPS Banda Aceh',
+        	'noSm' => 'B-030/bps/11723/05/2019',
+        	'tanggalSm' => '2021-01-02',
+        	'ringkasM' => 'Dokumen Survei',
+        	'tanggalDiterima' => '2021-01-04',
+        	'disposisi' => 'KABAG UMUM',
         	'KetDisposisi' => 'kfahfkafaka',
         	'catDisposisi' => 'jajajajaja',
         	'catDisposisi2' => 'ahahahahaha',
-        	'kode' => 'da21a3',
+        	'kode' => 'da21a3'
         ]);
     }
 }

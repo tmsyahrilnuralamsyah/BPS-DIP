@@ -32,7 +32,11 @@
                         <th class="px-5">Ubah/Hapus</th>
                         <th class="px-5">Nomor Terturut</th>
                         <th class="px-5">Pengirim</th>
-                        <th class="px-5">Nomor</th>
+                        <th class="px-5">
+                            <div class="px-5">
+                                Nomor
+                            </div>
+                        </th>
                         <th class="px-5">Tanggal Surat</th>
                         <th class="px-5">Isi Ringkas</th>
                         <th class="px-5">Tanggal Diterima</th>

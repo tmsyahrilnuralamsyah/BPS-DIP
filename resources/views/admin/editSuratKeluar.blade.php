@@ -7,15 +7,16 @@
 </div>
 
 <div class="card o-hidden border-0 shadow-lg mb-4">
-    <form class="form user m-5" method="POST" action="">
+    <form class="form user m-5" method="post" action="/admin/editSuratKeluar/{{ $books->id }}">
         {{ csrf_field() }}
+        {{ method_field('PUT') }}
         <div class="alert alert-success" role="alert">
             Data telah tersimpan
         </div>
 
         <div class="form-group">
             <label>Nomor Terturut</label>
-            <input type="text" name="noTk" class="form-control">
+            <input type="text" name="noTk" class="form-control" value="{{ $books -> noTk }}">
             @if($errors->has('noTk'))
                 <div class="text-danger">
                     {{ $errors->first('noTk')}}
@@ -25,7 +26,7 @@
 
         <div class="form-group">
             <label>Isi Ringkas</label>
-            <textarea type="textarea" name="ringkasK" class="form-control"></textarea>
+            <textarea type="textarea" name="ringkasK" class="form-control" value="{{ $books -> ringkasK }}"></textarea>
             @if($errors->has('ringkasK'))
                 <div class="text-danger">
                     {{ $errors->first('ringkasK')}}
@@ -35,7 +36,7 @@
 
         <div class="form-group">
             <label>Alamat</label>
-            <input type="text" name="alamatK" class="form-control">
+            <input type="text" name="alamatK" class="form-control" value="{{ $books -> alamatK }}">
             @if($errors->has('alamatK'))
                 <div class="text-danger">
                     {{ $errors->first('alamatK')}}
@@ -45,7 +46,7 @@
 
         <div class="form-group">
             <label>Tanggal</label>
-            <input type="date" name="tanggalK" class="form-control">
+            <input type="date" name="tanggalK" class="form-control" value="{{ $books -> tanggalK }}">
             @if($errors->has('tanggalK'))
                 <div class="text-danger">
                     {{ $errors->first('tanggalK')}}
@@ -55,7 +56,7 @@
 
         <div class="form-group">
             <label>Keterangan</label>
-            <textarea type="textarea" name="ketKeluar" class="form-control"></textarea>
+            <textarea type="textarea" name="ketKeluar" class="form-control" value="{{ $books -> ketKeluar }}"></textarea>
             @if($errors->has('ketKeluar'))
                 <div class="text-danger">
                     {{ $errors->first('ketKeluar')}}
