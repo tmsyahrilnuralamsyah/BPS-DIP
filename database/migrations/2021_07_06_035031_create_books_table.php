@@ -23,6 +23,7 @@ class CreateBooksTable extends Migration
             $table->date('tanggalDiterima');
             $table->string('disposisi');
             $table->string('ketDisposisi');
+            $table->string('noteDisposisi');
             $table->text('catDisposisi');
             $table->text('catDisposisi2');
             $table->string('kode');

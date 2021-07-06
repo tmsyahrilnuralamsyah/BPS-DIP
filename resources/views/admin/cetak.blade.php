@@ -50,19 +50,19 @@
             <div class="col-3">
                 <p2>Instansi</p2>
             </div>
-            <p2>:</p2>
+            <p2 class="mt-1">: {{ $books -> pengirim }}</p2>
         </div>
         <div class="row ml-1">
             <div class="col-3">
                 <p2>Nomor/Tanggal</p2>
             </div>
-            <p2>:</p2>
+            <p2 class="mt-1">: {{ $books -> noSm }} / {{ $books -> tanggalSm }}</p2>
         </div>
         <div class="row ml-1">
             <div class="col-3">
                 <p2>Perihal</p2>
             </div>
-            <p2>:</p2>
+            <p2 class="mt-1">: {{ $books -> ringkasM }}</p2>
         </div>
 
         <div class="row mt-1">
@@ -72,13 +72,13 @@
             <div class="col-3">
                 <p2>Nomor</p2>
             </div>
-            <p2>:</p2>
+            <p2 class="mt-1">: {{ $books -> noTm }}</p2>
         </div>
         <div class="row ml-1">
             <div class="col-3">
                 <p2>Tanggal Surat</p2>
             </div>
-            <p2>:</p2>
+            <p2 class="mt-1">: {{ $books -> tanggalDiterima }}</p2>
             <div class="col">
 
             </div>
@@ -120,25 +120,25 @@
                 <div class="row">
                     <div class="col-1">
                         <div class="row mt-1">
-                            <input type="checkbox" id="disposisi" name="disposisi" value="kabagUmum"/>
+                            <input type="checkbox" id="disposisi" name="disposisi" value="KABAG UMUM"/>
                         </div>
                         <div class="row mt-1">
-                            <input type="checkbox" id="disposisi" name="disposisi" value="koorSosial"/>
+                            <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi STAT. SOSIAL"/>
                         </div>
                         <div class="row mt-1">
-                            <input type="checkbox" id="disposisi" name="disposisi" value="koorProduksi"/>
+                            <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi STAT. PRODUKSI"/>
                         </div>
                         <div class="row mt-1">
-                            <input type="checkbox" id="disposisi" name="disposisi" value="koorDistribusi"/>
+                            <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi DTAT. DISTRIBUSI"/>
                         </div>
                         <div class="row mt-1">
-                            <input type="checkbox" id="disposisi" name="disposisi" value="koorCawilis"/>
+                            <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi CAWILIS"/>
                         </div>
                         <div class="row mt-1">
-                            <input type="checkbox" id="disposisi" name="disposisi" value="koorIpds"/>
+                            <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi IPDS"/>
                         </div>
                         <div class="row mt-1">
-                            <input type="checkbox" id="disposisi" name="disposisi" value="korpri"/>
+                            <input type="checkbox" id="disposisi" name="disposisi" value="KORPRI"/>
                         </div>
                     </div>
                     <div class="col">
@@ -173,7 +173,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p2 class="ml-2">Catatan :</p2>
+                            <p2 class="ml-2">Catatan : {{ $books -> noteDisposisi }}</p2>
                             <div class="mt-4 d-flex flex-row-reverse mr-5">
                                 <p2>Paraf/Tgl</p2>
                             </div>
@@ -188,7 +188,7 @@
         </div>
         <P2 class="ml-1">KEPADA</P2>
         <div class="border border-dark ml-1">
-            <p2 class="ml-2">Catatan :</p2>
+            <p2 class="ml-2">Catatan : {{ $books -> catDisposisi }}</p2>
             <div class="mt-3 d-flex flex-row-reverse mr-5">
                 <p2>Paraf/Tgl</p2>
             </div>
@@ -198,7 +198,7 @@
             <p><b>5. DISPOSISI KASUBAG/KOOR</b></p>
         </div>
         <div class="border border-dark ml-1">
-            <p2 class="ml-2">Catatan :</p2>
+            <p2 class="ml-2">Catatan : {{ $books -> catDisposisi2 }}</p2>
             <div class="mt-3 d-flex flex-row-reverse mr-5">
                 <p2>Paraf/Tgl</p2>
             </div>

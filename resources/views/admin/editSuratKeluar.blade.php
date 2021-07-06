@@ -26,7 +26,7 @@
 
         <div class="form-group">
             <label>Isi Ringkas</label>
-            <textarea type="textarea" name="ringkasK" class="form-control" value="{{ $books -> ringkasK }}"></textarea>
+            <textarea type="textarea" name="ringkasK" class="form-control">{{ $books -> ringkasK }}</textarea>
             @if($errors->has('ringkasK'))
                 <div class="text-danger">
                     {{ $errors->first('ringkasK')}}
@@ -56,7 +56,7 @@
 
         <div class="form-group">
             <label>Keterangan</label>
-            <textarea type="textarea" name="ketKeluar" class="form-control" value="{{ $books -> ketKeluar }}"></textarea>
+            <textarea type="textarea" name="ketKeluar" class="form-control">{{ $books -> ketKeluar }}</textarea>
             @if($errors->has('ketKeluar'))
                 <div class="text-danger">
                     {{ $errors->first('ketKeluar')}}

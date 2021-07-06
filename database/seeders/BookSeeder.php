@@ -23,7 +23,8 @@ class BookSeeder extends Seeder
         	'ringkasM' => 'Dokumen Survei',
         	'tanggalDiterima' => '2021-01-04',
         	'disposisi' => 'KABAG UMUM',
-        	'KetDisposisi' => 'kfahfkafaka',
+        	'KetDisposisi' => 'hp',
+            'noteDisposisi' => 'kdadala',
         	'catDisposisi' => 'jajajajaja',
         	'catDisposisi2' => 'ahahahahaha',
         	'kode' => 'da21a3'

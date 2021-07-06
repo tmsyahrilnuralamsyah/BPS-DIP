@@ -34,7 +34,7 @@ Route::get('/admin/editSuratMasuk/{id}', [BookController::class, 'editSuratMasuk
 Route::put('/admin/editSuratMasuk/{id}', [BookController::class, 'editSuratMasuk2']);
 Route::get('/admin/hapusSuratMasuk/{id}', [BookController::class, 'hapusSuratMasuk']);
 Route::get('/admin/daftarSuratMasuk/cari', [BookController::class, 'cariSuratMasuk']);
-Route::get('/admin/cetak', [BookController::class, 'cetakSuratMasuk']);
+Route::get('/admin/cetak/{id}', [BookController::class, 'cetakSuratMasuk']);
 
 Route::get('/admin/daftarSuratKeluar', [Book2Controller::class, 'daftarSuratKeluar']);
 Route::get('/admin/suratKeluar', [Book2Controller::class, 'suratKeluar']);

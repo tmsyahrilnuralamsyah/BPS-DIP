@@ -102,6 +102,6 @@ class BookController extends Controller
     public function cetakSuratMasuk($id)
     {
         $book = Book::find($id);
-        return view('admin.editSuratMasuk', ['books' => $book]);
+        return view('admin.cetak', ['books' => $book]);
     }
 }

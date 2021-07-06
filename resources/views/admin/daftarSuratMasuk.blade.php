@@ -42,6 +42,7 @@
                         <th class="px-5">Tanggal Diterima</th>
                         <th class="px-5">Disposisi</th>
                         <th class="px-5">Keterangan Disposisi</th>
+                        <th class="px-5">Catatan Disposisi</th>
                         <th class="px-5">Disposisi KABAG/KOOR</th>
                         <th class="px-5">Disposisi KASUBAG/KOOR</th>
                         <th class="px-4">Kode Admin</th>
@@ -54,7 +55,7 @@
                                 <a href="/admin/editSuratMasuk/{{ $b->id }}" class="btn btn-warning my-1">Ubah</a>
                                 <a href="/admin/hapusSuratMasuk/{{ $b->id }}" class="btn btn-danger my-1">Hapus</a>
                             </td>
-                            <td><a href="/cetak" style="color: blue" download>{{ $b->noTm }}</a></td>
+                            <td><a href="/admin/cetak/{{ $b->id }}" style="color: blue">{{ $b->noTm }}</a></td>
                             <td>{{ $b->pengirim }}</td>
                             <td>{{ $b->noSm }}</td>
                             <td>{{ $b->tanggalSm }}</td>
@@ -62,6 +63,7 @@
                             <td>{{ $b->tanggalDiterima }}</td>
                             <td>{{ $b->disposisi }}</td>
                             <td>{{ $b->ketDisposisi }}</td>
+                            <td>{{ $b->noteDisposisi }}</td>
                             <td>{{ $b->catDisposisi }}</td>
                             <td>{{ $b->catDisposisi2 }}</td>
                             <td>{{ $b->kode }}</td>

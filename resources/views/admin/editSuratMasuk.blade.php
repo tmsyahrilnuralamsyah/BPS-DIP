@@ -56,7 +56,7 @@
 
         <div class="form-group">
             <label>Isi Ringkas</label>
-            <textarea type="textarea" name="ringkasM" class="form-control" value="{{ $books -> ringkasM }}"></textarea>
+            <textarea type="textarea" name="ringkasM" class="form-control"">{{ $books -> ringkasM }}</textarea>
             @if($errors->has('ringkasM'))
                 <div class="text-danger">
                     {{ $errors->first('ringkasM')}}
@@ -79,13 +79,13 @@
                 <div class="col-xl-5 col-lg-12 col-md-12">
                     <label>Disposisi</label><br>
                     <div class="border border-dark ml-3 p-2">
-                        <input type="checkbox" id="disposisi" name="disposisi" value="kabagUmum"/> KABAG UMUM <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="koorSosial"/> Koordinator Fungsi STAT. SOSIAL <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="koorProduksi"/> Koordinator Fungsi STAT. PRODUKSI <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="koorDistribusi"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="koorCawilis"/> Koordinator Fungsi CAWILIS <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="koorIpds"/> Koordinator Fungsi IPDS <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="korpri"/> KORPRI <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="KABAG UMUM"/> KABAG UMUM <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi STAT. SOSIAL"/> Koordinator Fungsi STAT. SOSIAL <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi STAT. PRODUKSI"/> Koordinator Fungsi STAT. PRODUKSI <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi DTAT. DISTRIBUSI"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi CAWILIS"/> Koordinator Fungsi CAWILIS <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi IPDS"/> Koordinator Fungsi IPDS <br>
+                        <input type="checkbox" id="disposisi" name="disposisi" value="KORPRI"/> KORPRI <br>
                     </div>
                     @if($errors->has('disposisi'))
                         <div class="text-danger">
@@ -108,13 +108,18 @@
         </div>
 
         <div class="form-group">
+            <label>Catatan</label>
+            <textarea type="textarea" name="noteDisposisi" class="form-control">{{ $books -> noteDisposisi }}</textarea>
+        </div>
+
+        <div class="form-group">
             <label>Disposisi KABAG/Koordinator Fungsi</label>
-            <textarea type="textarea" name="catDisposisi" class="form-control" value="{{ $books -> catDisposisi }}"></textarea>
+            <textarea type="textarea" name="catDisposisi" class="form-control">{{ $books -> catDisposisi }}</textarea>
         </div>
 
         <div class="form-group">
             <label>Disposisi KASUBAG/Koordinator Fungsi</label>
-            <textarea type="textarea" name="catDisposisi2" class="form-control" value="{{ $books -> catDisposisi2 }}"></textarea>
+            <textarea type="textarea" name="catDisposisi2" class="form-control">{{ $books -> catDisposisi2 }}</textarea>
         </div>
 
         <div class="form-group">
