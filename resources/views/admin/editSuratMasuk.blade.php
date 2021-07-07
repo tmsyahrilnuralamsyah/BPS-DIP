@@ -7,7 +7,7 @@
 </div>
 
 <div class="card o-hidden border-0 shadow-lg mb-4">
-    <form class="form user m-5" method="post" action="/admin/editSuratMasuk/{{ $books->id }}">
+    <form class="form user m-5" method="post" action="{{ route("editsuratmasuk", $books->id) }}">
         {{ csrf_field() }}
         {{ method_field('PUT') }}
         <div class="alert alert-success" role="alert">
@@ -130,6 +130,7 @@
                     {{ $errors->first('kode')}}
                 </div>
             @endif
+            <p2>max. 8 karakter</p2>
         </div>
 
         <div class="d-flex flex-row-reverse mt-3">

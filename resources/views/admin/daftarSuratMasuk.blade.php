@@ -10,7 +10,7 @@
 <div class="card shadow mb-4">
     <div class="card-header py-2">
         <!-- Topbar Search -->
-        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="/admin/daftarSuratMasuk/cari" method="get">
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="{{ route("carisuratmasuk") }}" method="get">
             {{ csrf_field() }}
             <div class="input-group">
                 <input type="text" name="cari" class="form-control bg-white border-0 small" placeholder="Search..."
@@ -52,10 +52,10 @@
                     @foreach($books as $b)
                         <tr>
                             <td class="text-center">
-                                <a href="/admin/editSuratMasuk/{{ $b->id }}" class="btn btn-warning my-1">Ubah</a>
-                                <a href="/admin/hapusSuratMasuk/{{ $b->id }}" class="btn btn-danger my-1">Hapus</a>
+                                <a href="{{ route("editsuratmasuk", $b->id) }}" class="btn btn-warning my-1">Ubah</a>
+                                <a href="{{ route("hapussuratmasuk", $b->id) }}" class="btn btn-danger my-1">Hapus</a>
                             </td>
-                            <td><a href="/admin/cetak/{{ $b->id }}" style="color: blue">{{ $b->noTm }}</a></td>
+                            <td><a href="/admin/cetak/{{ $b->id }}" target="_blank" style="color: blue">{{ $b->noTm }}</a></td>
                             <td>{{ $b->pengirim }}</td>
                             <td>{{ $b->noSm }}</td>
                             <td>{{ $b->tanggalSm }}</td>

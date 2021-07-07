@@ -33,8 +33,13 @@
                                         <h1 class="h4 text-gray-900 font-weight-bold mb-4">Login BPS DIP!</h1>
                                     </div>
 
-                                    <form class="form user my-5" method="POST" action="/dashboard">
+                                    <form class="form user my-5" method="POST" action="{{ route("userlogin") }}">
                                         {{ csrf_field() }}
+                                        @if(session('message'))
+                                            <p>
+                                                {{ session('message') }}
+                                            </p>
+                                        @endif
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" name="nomorSurat" aria-describedby="emailHelp"

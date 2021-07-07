@@ -29,7 +29,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #00004d" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route("dashboard") }}">
                 <div class="sidebar-brand-icon">
                     <img src="{{ asset('assets/img/bps.svg') }}" style="width: 50px;" alt="">
                 </div>
@@ -41,31 +41,31 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="/admin/dashboard">
+                    <a class="nav-link" href="{{ route("dashboard") }}">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/admin/suratMasuk">
+                    <a class="nav-link" href="{{ route("suratmasuk") }}">
                         <i class="fas fa-fw fa-envelope"></i>
                         <span>Surat Masuk</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/admin/daftarSuratMasuk">
+                    <a class="nav-link" href="{{ route("daftarsuratkeluar") }}">
                         <i class="fas fa-fw fa-folder"></i>
                         <span>Daftar Surat Masuk</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/admin/suratKeluar">
+                    <a class="nav-link" href="{{ route("suratkeluar") }}">
                         <i class="fas fa-fw fa-envelope-open"></i>
                         <span>Surat Keluar</span></a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="/admin/daftarSuratKeluar">
+                    <a class="nav-link" href="{{ route("daftarsuratmasuk") }}">
                         <i class="fas fa-fw fa-folder-open"></i>
                         <span>Daftar Surat Keluar</span></a>
                 </li>
@@ -73,7 +73,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item active">
-                <a class="nav-link" href="/admin/login">
+                <a class="nav-link" href="{{ route("adminlogout") }}">
                     <i class="fas fa-fw"></i>
                     <span>Logout</span></a>
             </li>
@@ -94,12 +94,11 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="nav-link dropdown-toggle">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">admin</span>
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('assets/img/profil.png') }}">
-                            </a>
+                            </div>
                         </li>
                     </ul>
                 </nav>

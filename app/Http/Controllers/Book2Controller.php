@@ -22,7 +22,7 @@ class Book2Controller extends Controller
     public function tambahSuratKeluar(Request $request)
     {
         $this->validate($request,[
-            'noTk' => 'required',
+            'noTk' => 'required|unique:users',
             'ringkasK' => 'required',
             'alamatK' => 'required',
             'tanggalK' => 'required',
@@ -49,7 +49,7 @@ class Book2Controller extends Controller
     public function editSuratKeluar2($id, Request $request)
     {
         $this->validate($request,[
-            'noTk' => 'required',
+            'noTk' => 'required|unique:users',
             'ringkasK' => 'required',
             'alamatK' => 'required',
             'tanggalK' => 'required',
@@ -63,14 +63,14 @@ class Book2Controller extends Controller
         $book->tanggalK = $request->tanggalK;
         $book->ketKeluar = $request->ketKeluar;
         $book->save();
-        return redirect('/admin/daftarSuratKeluar');
+        return redirect(route('daftarsuratkeluar'));
     }
 
     public function hapusSuratKeluar($id)
     {
         $book = Book2::find($id);
         $book->delete();
-        return redirect('/admin/daftarSuratKeluar');
+        return redirect(route('daftarsuratkeluar'));
     }
 
     public function cariSuratKeluar(Request $request)

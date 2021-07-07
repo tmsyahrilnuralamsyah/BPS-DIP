@@ -10,7 +10,7 @@
 <div class="card shadow mb-4">
     <div class="card-header py-2">
         <!-- Topbar Search -->
-        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="/admin/daftarSuratKeluar/cari" method="get">
+        <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" action="{{ route("carisuratkeluar") }}" method="get">
             {{ csrf_field() }}
             <div class="input-group">
                 <input type="text" name="cari" class="form-control bg-white border-0 small" placeholder="Search..."
@@ -41,8 +41,8 @@
                     @foreach($books as $b)
                         <tr>
                             <td class="text-center">
-                                <a href="/admin/editSuratKeluar/{{ $b->id }}" class="btn btn-warning my-1">Ubah</a>
-                                <a href="/admin/hapusSuratKeluar/{{ $b->id }}" class="btn btn-danger my-1">Hapus</a>
+                                <a href="{{ route("editsuratkeluar", $b->id) }}" class="btn btn-warning my-1">Ubah</a>
+                                <a href="{{ route("hapussuratkeluar", $b->id) }}" class="btn btn-danger my-1">Hapus</a>
                             </td>
                             <td>{{ $b->noTk }}</td>
                             <td>{{ $b->ringkasK }}</td>

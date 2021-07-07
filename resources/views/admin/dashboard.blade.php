@@ -9,13 +9,13 @@
 <!-- Content Row -->
 <div class="row">
 
-    <!-- Mail (Today) -->
+    <!-- Surat Masuk (Harian) -->
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-primary shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Mail (Today)</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Surat Masuk (Harian)</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
                     </div>
                 </div>
@@ -23,13 +23,13 @@
         </div>
     </div>
 
-    <!-- Mail (Weekly) -->
+    <!-- Surat Masuk (Mingguan) -->
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Mail (Weekly)</div>
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Surat Masuk (Mingguan)</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">21</div>
                     </div>
                 </div>
@@ -37,13 +37,13 @@
         </div>
     </div>
 
-    <!-- Mail (Monthly) Card Example -->
+    <!-- Surat Keluar (Harian) -->
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-info shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Mail (Monthly)</div>
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Surat Keluar (Harian)</div>
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto">
                                 <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">118</div>
@@ -55,13 +55,13 @@
         </div>
     </div>
 
-    <!-- Mail (Year) -->
+    <!-- Surat Keluar (Mingguan) -->
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-warning shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Mail (Year)</div>
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Surat Keluar (Mingguan)</div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">1823</div>
                     </div>
                 </div>

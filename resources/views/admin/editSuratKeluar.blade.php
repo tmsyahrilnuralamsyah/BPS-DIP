@@ -7,7 +7,7 @@
 </div>
 
 <div class="card o-hidden border-0 shadow-lg mb-4">
-    <form class="form user m-5" method="post" action="/admin/editSuratKeluar/{{ $books->id }}">
+    <form class="form user m-5" method="post" action="{{ route("editsuratkeluar", $books->id) }}">
         {{ csrf_field() }}
         {{ method_field('PUT') }}
         <div class="alert alert-success" role="alert">

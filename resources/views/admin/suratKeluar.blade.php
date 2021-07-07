@@ -7,7 +7,7 @@
 </div>
 
 <div class="card o-hidden border-0 shadow-lg mb-4">
-    <form class="form user m-5" method="post" action="/admin/tambahSuratKeluar">
+    <form class="form user m-5" method="post" action="{{ route("tambahsuratkeluar") }}">
         {{ csrf_field() }}
         <div class="alert alert-success" role="alert">
             Data telah tersimpan

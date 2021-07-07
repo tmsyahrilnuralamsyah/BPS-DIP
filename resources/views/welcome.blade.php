@@ -31,8 +31,8 @@
                         </div>
                         <div class="text-center p-5">
                             <h4 style="color: rgb(112, 106, 106)">Masuk sebagai :</h4>
-                            <a href="/admin/login" class="btn btn-primary btn-user btn-block mt-2 mr-3">ADMIN</a>
-                            <a href="/user/login" class="btn btn-success btn-user btn-block mt-2">USER</a>
+                            <a href="{{ route("adminlogin") }}" class="btn btn-primary btn-user btn-block mt-2 mr-3">ADMIN</a>
+                            <a href="{{ route("userlogin") }}" class="btn btn-success btn-user btn-block mt-2">USER</a>
                         </div>
                     </div>
                 </div>

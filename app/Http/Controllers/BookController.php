@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Barryvdh\DomPDF\Facade as PDF;
 use App\Models\Book;
 
 class BookController extends Controller
@@ -22,13 +24,13 @@ class BookController extends Controller
     public function tambahSuratMasuk(Request $request)
     {
         $this->validate($request,[
-            'noTm' => 'required',
+            'noTm' => 'required|unique:users',
             'pengirim' => 'required',
             'noSm' => 'required',
             'tanggalSm' => 'required',
             'ringkasM' => 'required',
             'tanggalDiterima' => 'required',
-            'kode' => 'required'
+            'kode' => 'required|max:8'
     	]);
 
         Book::create([
@@ -40,6 +42,7 @@ class BookController extends Controller
             'tanggalDiterima' => $request->tanggalDiterima,
             'disposisi' => '',
             'ketDisposisi' => '',
+            'noteDisposisi' => '',
             'catDisposisi' => '',
             'catDisposisi2' => '',
             'kode' => $request->kode
@@ -57,7 +60,7 @@ class BookController extends Controller
     public function editSuratMasuk2($id, Request $request)
     {
         $this->validate($request,[
-            'noTm' => 'required',
+            'noTm' => 'required|unique:users',
             'pengirim' => 'required',
             'noSm' => 'required',
             'tanggalSm' => 'required',
@@ -65,8 +68,10 @@ class BookController extends Controller
             'tanggalDiterima' => 'required',
             'disposisi' => 'required',
             'ketDisposisi' => 'required',
+            'noteDisposisi' => 'required',
             'catDisposisi' => 'required',
-            'kode' => 'required'
+            'catDisposisi2' => 'required',
+            'kode' => 'required|max:8'
         ]);
 
         $book = Book::find($id);
@@ -78,18 +83,19 @@ class BookController extends Controller
         $book->tanggalDiterima = $request->tanggalDiterima;
         $book->disposisi = $request->disposisi;
         $book->ketDisposisi = $request->ketDisposisi;
+        $book->noteDisposisi = $request->noteDisposisi;
         $book->catDisposisi = $request->catDisposisi;
-        $book->catDisposisi2 = '';
+        $book->catDisposisi2 = $request->catDisposisi2;
         $book->kode = $request->kode;
         $book->save();
-        return redirect('/admin/daftarSuratMasuk');
+        return redirect(route('daftarsuratmasuk'));
     }
 
     public function hapusSuratMasuk($id)
     {
         $book = Book::find($id);
         $book->delete();
-        return redirect('/admin/daftarSuratMasuk');
+        return redirect(route('daftarsuratmasuk'));
     }
 
     public function cariSuratMasuk(Request $request)
@@ -103,5 +109,64 @@ class BookController extends Controller
     {
         $book = Book::find($id);
         return view('admin.cetak', ['books' => $book]);
+    }
+
+    public function downSuratMasuk()
+    {
+        $pdf = PDF::loadView('admin.cetak');
+        return $pdf->stream();
+    }
+
+    public function showUserLogin()
+    {
+        return view('user.login');
+    }
+
+    public function doUserLogin(Request $request)
+    {
+        $request->validate([
+            'noTm' => 'required',
+            'kode' => 'required',
+        ]);
+
+        if (Auth::attempt(['noTm' => $request->noTm, 'kode' => $request->kode])) {
+            return redirect(route('admindashboard'));
+        } else {
+            return redirect(route('adminlogin'))->with('info', 'nomor surat atau kode admin salah.')->withInput();
+        }
+    }
+
+    public function userLembar($id, Request $request)
+    {
+        $this->validate($request,[
+            'noTm' => 'required|unique:users',
+            'pengirim' => 'required',
+            'noSm' => 'required',
+            'tanggalSm' => 'required',
+            'ringkasM' => 'required',
+            'tanggalDiterima' => 'required',
+            'disposisi' => 'required',
+            'ketDisposisi' => 'required',
+            'noteDisposisi' => 'required',
+            'catDisposisi' => 'required',
+            'catDisposisi2' => 'required',
+            'kode' => 'required|max:8'
+        ]);
+
+        $book = Book::find($id);
+        $book->noTm = $request->noTm;
+        $book->pengirim = $request->pengirim;
+        $book->noSm = $request->noSm;
+        $book->tanggalSm = $request->tanggalSm;
+        $book->ringkasM = $request->ringkasM;
+        $book->tanggalDiterima = $request->tanggalDiterima;
+        $book->disposisi = $request->disposisi;
+        $book->ketDisposisi = $request->ketDisposisi;
+        $book->noteDisposisi = $request->noteDisposisi;
+        $book->catDisposisi = $request->catDisposisi;
+        $book->catDisposisi2 = $request->catDisposisi2;
+        $book->kode = $request->kode;
+        $book->save();
+        return redirect(route('userlembar'));
     }
 }
