@@ -22,13 +22,13 @@ class AdminController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'password' => 'required',
+            'password' => 'required'
         ]);
 
         if (Auth::guard('admin')->attempt(['name' => $request->name, 'password' => $request->password])) {
             return redirect(route('admindashboard'));
         } else {
-            return redirect(route('adminlogin'))->with('info', 'username atau password salah.')->withInput();
+            return redirect(route('adminlogin'))->with('message', 'username atau password salah.')->withInput();
         }
     }
 

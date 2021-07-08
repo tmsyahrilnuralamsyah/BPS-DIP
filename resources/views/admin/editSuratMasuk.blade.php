@@ -79,13 +79,13 @@
                 <div class="col-xl-5 col-lg-12 col-md-12">
                     <label>Disposisi</label><br>
                     <div class="border border-dark ml-3 p-2">
-                        <input type="checkbox" id="disposisi" name="disposisi" value="KABAG UMUM"/> KABAG UMUM <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi STAT. SOSIAL"/> Koordinator Fungsi STAT. SOSIAL <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi STAT. PRODUKSI"/> Koordinator Fungsi STAT. PRODUKSI <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi DTAT. DISTRIBUSI"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi CAWILIS"/> Koordinator Fungsi CAWILIS <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi IPDS"/> Koordinator Fungsi IPDS <br>
-                        <input type="checkbox" id="disposisi" name="disposisi" value="KORPRI"/> KORPRI <br>
+                        <input type="checkbox" id="disposisi" name="disposisi[]" value="KABAG UMUM"/> KABAG UMUM <br>
+                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. SOSIAL"/> Koordinator Fungsi STAT. SOSIAL <br>
+                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. PRODUKSI"/> Koordinator Fungsi STAT. PRODUKSI <br>
+                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi DTAT. DISTRIBUSI"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
+                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi CAWILIS"/> Koordinator Fungsi CAWILIS <br>
+                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi IPDS"/> Koordinator Fungsi IPDS <br>
+                        <input type="checkbox" id="disposisi" name="disposisi[]" value="KORPRI"/> KORPRI <br>
                     </div>
                     @if($errors->has('disposisi'))
                         <div class="text-danger">
@@ -96,12 +96,12 @@
                 <div class="col-xl-5 col-lg-12 col-md-12">
                     <label>Keterangan Disposisi</label><br>
                     <div class="border border-dark ml-3 p-2">
-                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="hp"/> Harap diproses <br>
-                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="pms"/> Penuhi maksud surat <br>
-                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="hj"/> Harap dijawab <br>
-                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="pk"/> Periksa kebenarannya <br>
-                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="tpy"/> Teruskan pada ybs. <br>
-                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi" value="um"/> Untuk dimaklumi <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="hp"/> Harap diproses <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="pms"/> Penuhi maksud surat <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="hj"/> Harap dijawab <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="pk"/> Periksa kebenarannya <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="tpy"/> Teruskan pada ybs. <br>
+                        <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="um"/> Untuk dimaklumi <br>
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@ class BookController extends Controller
     public function tambahSuratMasuk(Request $request)
     {
         $this->validate($request,[
-            'noTm' => 'required|unique:users',
+            'noTm' => 'required',
             'pengirim' => 'required',
             'noSm' => 'required',
             'tanggalSm' => 'required',
@@ -60,7 +60,7 @@ class BookController extends Controller
     public function editSuratMasuk2($id, Request $request)
     {
         $this->validate($request,[
-            'noTm' => 'required|unique:users',
+            'noTm' => 'required',
             'pengirim' => 'required',
             'noSm' => 'required',
             'tanggalSm' => 'required',
@@ -126,20 +126,20 @@ class BookController extends Controller
     {
         $request->validate([
             'noTm' => 'required',
-            'kode' => 'required',
+            'kode' => 'required'
         ]);
 
         if (Auth::attempt(['noTm' => $request->noTm, 'kode' => $request->kode])) {
-            return redirect(route('admindashboard'));
+            return redirect(route('userlembar'));
         } else {
-            return redirect(route('adminlogin'))->with('info', 'nomor surat atau kode admin salah.')->withInput();
+            return redirect(route('userlogin'))->with('message', 'nomor surat atau kode admin salah.')->withInput();
         }
     }
 
     public function userLembar($id, Request $request)
     {
         $this->validate($request,[
-            'noTm' => 'required|unique:users',
+            'noTm' => 'required',
             'pengirim' => 'required',
             'noSm' => 'required',
             'tanggalSm' => 'required',

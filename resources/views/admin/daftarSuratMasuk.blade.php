@@ -61,6 +61,9 @@
                             <td>{{ $b->tanggalSm }}</td>
                             <td>{{ $b->ringkasM }}</td>
                             <td>{{ $b->tanggalDiterima }}</td>
+                            {{-- @foreach($b->disposisi[i] as $dis)
+                                {{ $dis->i }}
+                            @endforeach --}}
                             <td>{{ $b->disposisi }}</td>
                             <td>{{ $b->ketDisposisi }}</td>
                             <td>{{ $b->noteDisposisi }}</td>

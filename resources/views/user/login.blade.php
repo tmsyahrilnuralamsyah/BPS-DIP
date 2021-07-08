@@ -46,7 +46,7 @@
                                                 placeholder="Nomor Surat">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user"
+                                            <input type="password" class="form-control form-control-user"
                                                 id="exampleInputPassword" name="kodeAdmin" placeholder="Kode Admin">
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block my-5">Login</button>

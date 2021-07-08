@@ -53,7 +53,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route("daftarsuratkeluar") }}">
+                    <a class="nav-link" href="{{ route("daftarsuratmasuk") }}">
                         <i class="fas fa-fw fa-folder"></i>
                         <span>Daftar Surat Masuk</span></a>
                 </li>
@@ -65,7 +65,7 @@
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route("daftarsuratmasuk") }}">
+                    <a class="nav-link" href="{{ route("daftarsuratkeluar") }}">
                         <i class="fas fa-fw fa-folder-open"></i>
                         <span>Daftar Surat Keluar</span></a>
                 </li>

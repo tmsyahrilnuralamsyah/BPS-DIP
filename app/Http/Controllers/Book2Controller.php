@@ -22,7 +22,7 @@ class Book2Controller extends Controller
     public function tambahSuratKeluar(Request $request)
     {
         $this->validate($request,[
-            'noTk' => 'required|unique:users',
+            'noTk' => 'required',
             'ringkasK' => 'required',
             'alamatK' => 'required',
             'tanggalK' => 'required',
@@ -49,7 +49,7 @@ class Book2Controller extends Controller
     public function editSuratKeluar2($id, Request $request)
     {
         $this->validate($request,[
-            'noTk' => 'required|unique:users',
+            'noTk' => 'required',
             'ringkasK' => 'required',
             'alamatK' => 'required',
             'tanggalK' => 'required',
