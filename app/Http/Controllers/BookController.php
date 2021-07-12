@@ -10,6 +10,11 @@ use App\Models\Book;
 
 class BookController extends Controller
 {
+    public function dashboard()
+    {
+        return view('admin.dashboard');
+    }
+
     public function daftarSuratMasuk()
     {
     	$book = Book::orderBy('id', 'desc')->get();
@@ -111,12 +116,6 @@ class BookController extends Controller
         return view('admin.cetak', ['books' => $book]);
     }
 
-    public function downSuratMasuk()
-    {
-        $pdf = PDF::loadView('admin.cetak');
-        return $pdf->stream();
-    }
-
     public function showUserLogin()
     {
         return view('user.login');
@@ -129,7 +128,7 @@ class BookController extends Controller
             'kode' => 'required'
         ]);
 
-        if (Auth::attempt(['noTm' => $request->noTm, 'kode' => $request->kode])) {
+        if (['noTm' => $request->noTm, 'kode' => $request->kode]) {
             return redirect(route('userlembar'));
         } else {
             return redirect(route('userlogin'))->with('message', 'nomor surat atau kode admin salah.')->withInput();

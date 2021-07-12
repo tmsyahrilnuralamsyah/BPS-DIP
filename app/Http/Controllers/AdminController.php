@@ -37,9 +37,4 @@ class AdminController extends Controller
         Auth::guard('admin')->logout();
         return redirect(route('adminlogin'));
     }
-
-    public function dashboard()
-    {
-        return view('admin.dashboard');
-    }
 }

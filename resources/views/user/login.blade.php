@@ -36,18 +36,18 @@
                                     <form class="form user my-5" method="post" action="{{ route("userlogin") }}">
                                         {{ csrf_field() }}
                                         @if(session('message'))
-                                            <p>
+                                            <p style="color: red;">
                                                 {{ session('message') }}
                                             </p>
                                         @endif
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" name="nomorSurat" aria-describedby="emailHelp"
+                                                id="exampleInputEmail" name="noTm" aria-describedby="emailHelp"
                                                 placeholder="Nomor Surat">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" name="kodeAdmin" placeholder="Kode Admin">
+                                                id="exampleInputPassword" name="kode" placeholder="Kode Admin">
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block my-5">Login</button>
                                     </form>

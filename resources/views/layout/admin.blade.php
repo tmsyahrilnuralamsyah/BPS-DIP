@@ -29,7 +29,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #00004d" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route("dashboard") }}">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route("admindashboard") }}">
                 <div class="sidebar-brand-icon">
                     <img src="{{ asset('assets/img/bps.svg') }}" style="width: 50px;" alt="">
                 </div>
@@ -41,7 +41,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route("dashboard") }}">
+                    <a class="nav-link" href="{{ route("admindashboard") }}">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span>Dashboard</span></a>
                 </li>

@@ -36,13 +36,13 @@
                                     <form class="form user my-5" method="post" action="{{ route("adminlogin") }}">
                                         {{ csrf_field() }}
                                         @if(session('message'))
-                                            <p>
+                                            <p style="color: red;">
                                                 {{ session('message') }}
                                             </p>
                                         @endif
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
-                                                id="exampleInputEmail" name="username" aria-describedby="emailHelp"
+                                                id="exampleInputEmail" name="name" aria-describedby="emailHelp"
                                                 placeholder="Username">
                                         </div>
                                         <div class="form-group">

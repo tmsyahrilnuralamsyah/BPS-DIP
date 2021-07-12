@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark topbar static-top shadow">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-                <a href="{{ route('downsuratmasuk') }}" class="btn btn-primary px-5 mr-5">Download</a>
+                <button onclick="printContent('pdf')" class="btn btn-primary px-5 mr-5">Download</button>
             </li>
         </ul>
     </nav>
@@ -256,4 +256,14 @@
         </div>
     </div>
 </body>
+
+<script>
+	function printContent(el) {
+		var restorepage = document.body.innerHTML;
+		var printcontent = document.getElementById(el).innerHTML;
+		document.body.innerHTML = printcontent;
+		window.print();
+		document.body.innerHTML = restorepage;
+	}
+</script>
 </html>
