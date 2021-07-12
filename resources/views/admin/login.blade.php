@@ -33,7 +33,7 @@
                                         <h1 class="h4 text-gray-900 font-weight-bold mb-4">Login BPS DIP!</h1>
                                     </div>
 
-                                    <form class="form user my-5" method="POST" action="{{ route("adminlogin") }}">
+                                    <form class="form user my-5" method="post" action="{{ route("adminlogin") }}">
                                         {{ csrf_field() }}
                                         @if(session('message'))
                                             <p>

@@ -12,7 +12,7 @@ class BookController extends Controller
 {
     public function daftarSuratMasuk()
     {
-    	$book = Book::all();
+    	$book = Book::orderBy('id', 'desc')->get();
     	return view('admin.daftarSuratMasuk', ['books' => $book]);
     }
 
@@ -48,7 +48,7 @@ class BookController extends Controller
             'kode' => $request->kode
     	]);
 
-    	return redirect()->back();
+    	return redirect()->back()->with('alert', 'Data telah tersimpan')->withInput();
     }
 
     public function editSuratMasuk($id)

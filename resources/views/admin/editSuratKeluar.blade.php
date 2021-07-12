@@ -10,9 +10,6 @@
     <form class="form user m-5" method="post" action="{{ route("editsuratkeluar", $books->id) }}">
         {{ csrf_field() }}
         {{ method_field('PUT') }}
-        <div class="alert alert-success" role="alert">
-            Data telah tersimpan
-        </div>
 
         <div class="form-group">
             <label>Nomor Terturut</label>

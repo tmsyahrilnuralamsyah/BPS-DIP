@@ -9,9 +9,12 @@
 <div class="card o-hidden border-0 shadow-lg mb-4">
     <form class="form user m-5" method="post" action="{{ route("tambahsuratmasuk") }}">
         {{ csrf_field() }}
-        <div class="alert alert-success" role="alert">
-            Data telah tersimpan
-        </div>
+
+        @if(session('alert'))
+            <div class="alert alert-success" role="alert">
+                {{ session('alert') }}
+            </div>
+        @endif
 
         <div class="form-group">
             <label>Nomor Terturut</label>
