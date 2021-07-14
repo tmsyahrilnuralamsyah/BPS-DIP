@@ -24,7 +24,7 @@ Route::group(['middleware' => 'guest'], function () {
     Route::get('/admin/login', [AdminController::class, 'showLogin'])->name('adminlogin');
     Route::post('/admin/login', [AdminController::class, 'doLogin'])->name('adminlogin');
 });
-Route::get('admin/logout', [AdminController::class, 'logout'])->name('adminlogout');
+Route::get('/admin/logout', [AdminController::class, 'logout'])->name('adminlogout');
 
 Route::get('/admin/dashboard', [BookController::class, 'dashboard'])->name('admindashboard');
 Route::get('/admin/daftarSuratMasuk', [BookController::class, 'daftarSuratMasuk'])->name('daftarsuratmasuk');
@@ -38,7 +38,8 @@ Route::get('/admin/cetak/{id}', [BookController::class, 'cetakSuratMasuk'])->nam
 
 Route::get('/user/login', [BookController::class, 'showUserLogin'])->name('userlogin');
 Route::post('/user/login', [BookController::class, 'doUserLogin'])->name('userlogin');
-Route::get('/user/lembar/{id}', [BookController::class, 'userLembar'])->name('userlembar');
+Route::get('/user/lembar/{noTm}', [BookController::class, 'userLembar'])->name('userlembar');
+Route::put('/user/lembar/{id}', [BookController::class, 'userLembar2'])->name('userlembar');
 
 Route::get('/admin/daftarSuratKeluar', [Book2Controller::class, 'daftarSuratKeluar'])->name('daftarsuratkeluar');
 Route::get('/admin/suratKeluar', [Book2Controller::class, 'suratKeluar'])->name('suratkeluar');

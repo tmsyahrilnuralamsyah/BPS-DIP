@@ -35,11 +35,13 @@
 
                                     <form class="form user my-5" method="post" action="{{ route("userlogin") }}">
                                         {{ csrf_field() }}
+
                                         @if(session('message'))
                                             <p style="color: red;">
                                                 {{ session('message') }}
                                             </p>
                                         @endif
+
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
                                                 id="exampleInputEmail" name="noTm" aria-describedby="emailHelp"

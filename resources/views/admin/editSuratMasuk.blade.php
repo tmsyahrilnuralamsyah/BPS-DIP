@@ -76,7 +76,9 @@
                 <div class="col-xl-5 col-lg-12 col-md-12">
                     <label>Disposisi</label><br>
                     <div class="border border-dark ml-3 p-2">
-                        <input type="checkbox" id="disposisi" name="disposisi[]" value="KABAG UMUM"/> KABAG UMUM <br>
+                        <input type="checkbox" id="disposisi" name="disposisi[]" value="KABAG UMUM" {{ ($books->disposisi == 'KABAG UMUM' ? ' checked' : '') }}
+
+                        /> KABAG UMUM <br>
                         <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. SOSIAL"/> Koordinator Fungsi STAT. SOSIAL <br>
                         <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. PRODUKSI"/> Koordinator Fungsi STAT. PRODUKSI <br>
                         <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi DTAT. DISTRIBUSI"/> Koordinator Fungsi DTAT. DISTRIBUSI <br>

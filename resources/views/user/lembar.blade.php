@@ -18,27 +18,39 @@
     <title>BPS DIP</title>
 </head>
 <body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark topbar static-top shadow">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown no-arrow">
+                <a href="{{ route("userlogin") }}" class="btn btn-primary px-5 mr-5">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
     <div class="container">
         <div class="card o-hidden border-0 shadow-lg my-4">
-            <form class="form user m-5" method="POST" action="">
+            <form class="form user m-5" method="post" action="{{ route("userlembar", $books->id) }}">
                 {{ csrf_field() }}
-                <div class="alert alert-success" role="alert">
-                    Data telah tersimpan
-                </div>
+                {{ method_field('PUT') }}
+
+                @if(session('alert'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session('alert') }}
+                    </div>
+                @endif
 
                 <div class="form-group">
                     <label>Nomor Terturut</label>
-                    <input type="text" name="noT" class="form-control" disabled>
-                    @if($errors->has('noT'))
+                    <input type="text" name="noTm" class="form-control" value="{{ $books -> noTm }}" disabled>
+                    @if($errors->has('noTm'))
                         <div class="text-danger">
-                            {{ $errors->first('noT')}}
+                            {{ $errors->first('noTm')}}
                         </div>
                     @endif
                 </div>
 
                 <div class="form-group">
                     <label>Pengirim</label>
-                    <input type="text" name="pengirim" class="form-control" disabled>
+                    <input type="text" name="pengirim" class="form-control" value="{{ $books -> pengirim }}" disabled>
                     @if($errors->has('pengirim'))
                         <div class="text-danger">
                             {{ $errors->first('pengirim')}}
@@ -48,37 +60,37 @@
 
                 <div class="form-group">
                     <label>Nomor</label>
-                    <input type="text" name="no" class="form-control" disabled>
-                    @if($errors->has('no'))
+                    <input type="text" name="noSm" class="form-control" value="{{ $books -> noSm }}" disabled>
+                    @if($errors->has('noSm'))
                         <div class="text-danger">
-                            {{ $errors->first('no')}}
+                            {{ $errors->first('noSm')}}
                         </div>
                     @endif
                 </div>
 
                 <div class="form-group">
                     <label>Tanggal</label>
-                    <input type="date" name="tanggal" class="form-control" disabled>
-                    @if($errors->has('tanggal'))
+                    <input type="date" name="tanggalSm" class="form-control" value="{{ $books -> tanggalSm }}" disabled>
+                    @if($errors->has('tanggalSm'))
                         <div class="text-danger">
-                            {{ $errors->first('tanggal')}}
+                            {{ $errors->first('tanggalSm')}}
                         </div>
                     @endif
                 </div>
 
                 <div class="form-group">
                     <label>Isi Ringkas</label>
-                    <textarea type="textarea" name="ringkas" class="form-control" disabled></textarea>
-                    @if($errors->has('ringkas'))
+                    <textarea type="textarea" name="ringkasM" class="form-control" disabled>{{ $books -> ringkasM }}</textarea>
+                    @if($errors->has('ringkasM'))
                         <div class="text-danger">
-                            {{ $errors->first('ringkas')}}
+                            {{ $errors->first('ringkasM')}}
                         </div>
                     @endif
                 </div>
 
                 <div class="form-group">
                     <label>Tanggal Diterima</label>
-                    <input type="date" name="tanggalDiterima" class="form-control" disabled>
+                    <input type="date" name="tanggalDiterima" class="form-control" value="{{ $books -> tanggalDiterima }}" disabled>
                     @if($errors->has('tanggalDiterima'))
                         <div class="text-danger">
                             {{ $errors->first('tanggalDiterima')}}
@@ -115,33 +127,23 @@
                                 <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="tpy"/> Teruskan pada ybs. <br>
                                 <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="um"/> Untuk dimaklumi <br>
                             </div>
-                            @if($errors->has('ketDisposisi'))
-                                <div class="text-danger">
-                                    {{ $errors->first('disposisi')}}
-                                </div>
-                            @endif
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
+                    <label>Catatan</label>
+                    <textarea type="textarea" name="noteDisposisi" class="form-control">{{ $books -> noteDisposisi }}</textarea>
+                </div>
+
+                <div class="form-group">
                     <label>Disposisi KABAG/Koordinator Fungsi</label>
-                    <textarea type="textarea" name="catDisposisi" class="form-control"></textarea>
-                    @if($errors->has('catDisposisi'))
-                        <div class="text-danger">
-                            {{ $errors->first('catDisposisi')}}
-                        </div>
-                    @endif
+                    <textarea type="textarea" name="catDisposisi" class="form-control">{{ $books -> catDisposisi }}</textarea>
                 </div>
 
                 <div class="form-group">
                     <label>Disposisi KASUBAG/Koordinator Fungsi</label>
-                    <textarea type="textarea" name="catDisposisi2" class="form-control"></textarea>
-                    @if($errors->has('catDisposisi2'))
-                        <div class="text-danger">
-                            {{ $errors->first('catDisposisi2')}}
-                        </div>
-                    @endif
+                    <textarea type="textarea" name="catDisposisi2" class="form-control">{{ $books -> catDisposisi2 }}</textarea>
                 </div>
 
                 <div class="d-flex flex-row-reverse mt-3">

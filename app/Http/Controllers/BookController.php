@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
-use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\Crypt;
 use App\Models\Book;
 
 class BookController extends Controller
@@ -128,44 +127,37 @@ class BookController extends Controller
             'kode' => 'required'
         ]);
 
-        if (['noTm' => $request->noTm, 'kode' => $request->kode]) {
-            return redirect(route('userlembar'));
+        if (Book::where('noTm', $request->noTm)->where('kode', $request->kode)->first()) {
+            return redirect(route("userlembar", Crypt::encryptString($request->noTm)));
         } else {
-            return redirect(route('userlogin'))->with('message', 'nomor surat atau kode admin salah.')->withInput();
+            return redirect()->back()->with('message', 'nomor surat atau kode admin salah.')->withInput();
         }
     }
 
-    public function userLembar($id, Request $request)
+    public function userLembar($noTm)
+    {
+        $noTm = Crypt::decryptString($noTm);
+        $book = Book::where('noTm', $noTm)->first();
+        return view('user.lembar', ['books' => $book]);
+    }
+
+    public function userLembar2($id, Request $request)
     {
         $this->validate($request,[
-            'noTm' => 'required',
-            'pengirim' => 'required',
-            'noSm' => 'required',
-            'tanggalSm' => 'required',
-            'ringkasM' => 'required',
-            'tanggalDiterima' => 'required',
             'disposisi' => 'required',
             'ketDisposisi' => 'required',
             'noteDisposisi' => 'required',
             'catDisposisi' => 'required',
-            'catDisposisi2' => 'required',
-            'kode' => 'required|max:8'
+            'catDisposisi2' => 'required'
         ]);
 
         $book = Book::find($id);
-        $book->noTm = $request->noTm;
-        $book->pengirim = $request->pengirim;
-        $book->noSm = $request->noSm;
-        $book->tanggalSm = $request->tanggalSm;
-        $book->ringkasM = $request->ringkasM;
-        $book->tanggalDiterima = $request->tanggalDiterima;
         $book->disposisi = $request->disposisi;
         $book->ketDisposisi = $request->ketDisposisi;
         $book->noteDisposisi = $request->noteDisposisi;
         $book->catDisposisi = $request->catDisposisi;
         $book->catDisposisi2 = $request->catDisposisi2;
-        $book->kode = $request->kode;
         $book->save();
-        return redirect(route('userlembar'));
+        return redirect()->back()->with('alert', 'Data telah tersimpan')->withInput();
     }
 }
