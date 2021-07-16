@@ -6,12 +6,18 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Crypt;
 use App\Models\Book;
+use App\Models\Book2;
+use Carbon\Carbon;
 
 class BookController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $book1 = Book::whereDate('created_at', Carbon::today())->get();
+        $book2 = Book::whereMonth('created_at', date('m'))->get();
+        $book3 = Book2::whereDate('created_at', Carbon::today())->get();
+        $book4 = Book2::whereMonth('created_at', date('m'))->get();
+        return view('admin.dashboard', ['book1' => $book1, 'book2' => $book2, 'book3' => $book3, 'book4' => $book4]);
     }
 
     public function daftarSuratMasuk()

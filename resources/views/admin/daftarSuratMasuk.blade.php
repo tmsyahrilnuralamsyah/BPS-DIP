@@ -26,8 +26,8 @@
 
     <div class="card-body">
         <div class="table-responsive" style="overflow-x: scroll;">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
+            <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
+                <thead class="thead-dark">
                     <tr class="text-center">
                         <th class="px-5">Ubah/Hapus</th>
                         <th class="px-5">Nomor Terturut</th>
@@ -61,9 +61,11 @@
                             <td>{{ $b->tanggalSm }}</td>
                             <td>{{ $b->ringkasM }}</td>
                             <td>{{ $b->tanggalDiterima }}</td>
-                            {{-- @foreach($b->disposisi->all() as $dis)
-                                {{ $dis }}
-                            @endforeach --}}
+                            {{-- <td>
+                                @foreach($b->disposisi as $dis)
+                                    <li>{{ $dis }}</li>
+                                @endforeach
+                            </td> --}}
                             <td>{{ $b->disposisi }}</td>
                             <td>{{ $b->ketDisposisi }}</td>
                             <td>{{ $b->noteDisposisi }}</td>

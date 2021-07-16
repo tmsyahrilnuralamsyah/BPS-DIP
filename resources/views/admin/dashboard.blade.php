@@ -16,21 +16,21 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Surat Masuk (Harian)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ count($book1) }}</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Surat Masuk (Mingguan) -->
+    <!-- Surat Masuk (Bulanan) -->
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-success shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Surat Masuk (Mingguan)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">21</div>
+                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Surat Masuk (Bulanan)</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ count($book2) }}</div>
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Surat Keluar (Harian)</div>
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto">
-                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">118</div>
+                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ count($book3) }}</div>
                             </div>
                         </div>
                     </div>
@@ -55,14 +55,14 @@
         </div>
     </div>
 
-    <!-- Surat Keluar (Mingguan) -->
+    <!-- Surat Keluar (Bulanan) -->
     <div class="col-xl-3 col-md-6 mb-4">
         <div class="card border-left-warning shadow h-100 py-2">
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Surat Keluar (Mingguan)</div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">1823</div>
+                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Surat Keluar (Bulanan)</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">{{ count($book4) }}</div>
                     </div>
                 </div>
             </div>
