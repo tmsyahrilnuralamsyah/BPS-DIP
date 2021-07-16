@@ -22,7 +22,7 @@ class BookController extends Controller
 
     public function daftarSuratMasuk()
     {
-    	$book = Book::orderBy('id', 'desc')->get();
+    	$book = Book::orderBy('id', 'desc')->paginate(10);
     	return view('admin.daftarSuratMasuk', ['books' => $book]);
     }
 

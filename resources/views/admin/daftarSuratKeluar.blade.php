@@ -54,6 +54,16 @@
                 </tbody>
             </table>
         </div>
+        <div class="row mt-3">
+            <div class="col-4">
+                <p class="d-flex ml-2">Jumlah Data : {{ $books->total() }}</p>
+            </div>
+            <div class="col">
+                <div class="d-flex flex-row-reverse">
+                    {{ $books->links() }}
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- /.container-fluid -->
