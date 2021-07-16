@@ -131,14 +131,15 @@ table {
         /* Reset all page styles that have been for better screen appearance only */
         /* Break cascading by using the !important rule */
         /* These resets are absolute must-haves for the print styles and the specificity may be higher elsewhere */
-        width: initial !important;
-        min-height: initial !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        border: initial !important;
-        border-radius: initial !important;
-        background: initial !important;
-        box-shadow: initial !important;
+        margin: 0;
+        padding: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
 
         /* Force page breaks after each .page element of the document */
         page-break-after: always;
@@ -148,9 +149,9 @@ table {
     /* Styles for better appearance on screens only -- are reset to defaults in print styles later */
 
     /* Reflect the paper width in the screen rendering (must match size from @page rule) */
-    width: 14.8cm;
+    width: 15.7cm;
     /* Reflect the paper height in the screen rendering (must match size from @page rule) */
-    min-height: 21cm;
+    max-height: 21cm;
 
     /* Reflect the actual page margin/padding on paper in the screen rendering (must match margin from @page rule) */
     padding-left: 1cm;
@@ -163,13 +164,14 @@ table {
     /* You can only change the size, margins, orphans, widows and page breaks here */
 
     /* Paper size and page orientation */
-    /* size: A5; */
-    width: 14.8cm;
-    min-height: 21cm;
+    size: landscape;
+    /* width: 14.8cm;
+    min-height: 21cm; */
 
     /* Margin per single side of the page */
-    padding-left: 1cm;
+    /* padding-left: 1cm;
     padding-top: 0.5cm;
-    padding-right: 1cm;
-    padding-bottom: 0.5cm;
+    padding-right: 14cm;
+    padding-bottom: 0.5cm; */
+    margin-right: 3cm;
 }

@@ -34,7 +34,7 @@
         <div class="page">
             <div class="row">
                 <div class="col-3 mt-2">
-                    <img src="{{ asset('assets/img/bps.svg') }}" style="width: 100px;" alt="">
+                    <img src="{{ asset('assets/img/bps.svg') }}" class="ml-1" style="width: 100px;" alt="">
                 </div>
                 <div class="col-6">
                     <div class="row justify-content-center">
@@ -53,38 +53,38 @@
             </div>
 
             <div class="row">
-                <p><b>1. SURAT DARI</b></p>
+                <p class="ml-3"><b>1. SURAT DARI</b></p>
             </div>
             <div class="row ml-1">
-                <div class="col-3">
+                <div class="col-3 ml-2">
                     <p2>Instansi</p2>
                 </div>
                 <p2 class="mt-1">: {{ $books -> pengirim }}</p2>
             </div>
             <div class="row ml-1">
-                <div class="col-3">
+                <div class="col-3 ml-2">
                     <p2>Nomor/Tanggal</p2>
                 </div>
                 <p2 class="mt-1">: {{ $books -> noSm }} / {{ $books -> tanggalSm }}</p2>
             </div>
             <div class="row ml-1">
-                <div class="col-3">
+                <div class="col-3 ml-2">
                     <p2>Perihal</p2>
                 </div>
                 <p2 class="mt-1">: {{ $books -> ringkasM }}</p2>
             </div>
 
             <div class="row mt-1">
-                <p><b>2. KODE INDEK UMUM</b></p>
+                <p class="ml-3"><b>2. KODE INDEK UMUM</b></p>
             </div>
             <div class="row ml-1">
-                <div class="col-3">
+                <div class="col-3 ml-2">
                     <p2>Nomor</p2>
                 </div>
                 <p2 class="mt-1">: {{ $books -> noTm }}</p2>
             </div>
             <div class="row ml-1">
-                <div class="col-3">
+                <div class="col-3 ml-2">
                     <p2>Tanggal Surat</p2>
                 </div>
                 <p2 class="mt-1">: {{ $books -> tanggalDiterima }}</p2>
@@ -99,29 +99,29 @@
             </div>
 
             <div class="row mt-1">
-                <p><b>3. DISPOSISI KEPALA KEPADA :</b></p>
+                <p class="ml-3"><b>3. DISPOSISI KEPALA KEPADA :</b></p>
             </div>
             <div class="row">
                 <div class="col-4">
-                    <div class="row ml-1">
+                    <div class="row ml-4">
                         <p2>KABAG UMUM</p2>
                     </div>
-                    <div class="row ml-1">
+                    <div class="row ml-4">
                         <p2>KOOR STAT. SOSIAL</p2>
                     </div>
-                    <div class="row ml-1">
+                    <div class="row ml-4">
                         <p2>KOOR STAT. PRODUKSI</p2>
                     </div>
-                    <div class="row ml-1">
+                    <div class="row ml-4">
                         <p2>KOOR DTAT. DISTRIBUSI</p2>
                     </div>
-                    <div class="row ml-1">
+                    <div class="row ml-4">
                         <p2>KOOR CAWILIS</p2>
                     </div>
-                    <div class="row ml-1">
+                    <div class="row ml-4">
                         <p2>KOOR IPDS</p2>
                     </div>
-                    <div class="row ml-1">
+                    <div class="row ml-4">
                         <p2>KORPRI</p2>
                     </div>
                 </div>
@@ -193,20 +193,22 @@
             </div>
 
             <div class="row mt-1">
-                <p><b>4. DISPOSISI KABAG/KOOR</b></p>
+                <p class="ml-3"><b>4. DISPOSISI KABAG/KOOR</b></p>
             </div>
-            <P2 class="ml-1">KEPADA</P2>
-            <div class="border border-dark ml-1">
-                <p2 class="ml-2">Catatan : {{ $books -> catDisposisi }}</p2>
-                <div class="mt-3 d-flex flex-row-reverse mr-5">
-                    <p2>Paraf/Tgl</p2>
+            <div class="ml-4">
+                <P2>KEPADA</P2>
+                <div class="border border-dark">
+                    <p2 class="ml-2">Catatan : {{ $books -> catDisposisi }}</p2>
+                    <div class="mt-3 d-flex flex-row-reverse mr-5">
+                        <p2>Paraf/Tgl</p2>
+                    </div>
                 </div>
             </div>
 
             <div class="row mt-1">
-                <p><b>5. DISPOSISI KASUBAG/KOOR</b></p>
+                <p class="ml-3"><b>5. DISPOSISI KASUBAG/KOOR</b></p>
             </div>
-            <div class="border border-dark ml-1">
+            <div class="border border-dark ml-4">
                 <p2 class="ml-2">Catatan : {{ $books -> catDisposisi2 }}</p2>
                 <div class="mt-3 d-flex flex-row-reverse mr-5">
                     <p2>Paraf/Tgl</p2>
@@ -214,22 +216,22 @@
             </div>
 
             <div class="row mt-1">
-                <div class="col-3">
+                <div class="col-3 ml-2">
                     <p2><b>KODE INDEK</b></p2>
                 </div>
-                <p2><b>:</b></p2>
+                <p2 class="mt-1"><b>:</b></p2>
             </div>
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 ml-2">
                     <p2>Nomor</p2>
                 </div>
-                <p2>:</p2>
+                <p2 class="mt-1">:</p2>
             </div>
             <div class="row">
-                <div class="col-3">
+                <div class="col-3 ml-2">
                     <p2>Tanggal</p2>
                 </div>
-                <p2>:</p2>
+                <p2 class="mt-1">:</p2>
                 <div class="col">
 
                 </div>
@@ -241,10 +243,10 @@
             </div>
 
             <div class="row mt-1">
-                <p2>Jl. Tgk. H. M. Daud Beureueh No. 50 Telp. (0651) 23005 fax. 33632</p2>
+                <p2 class="ml-3">Jl. Tgk. H. M. Daud Beureueh No. 50 Telp. (0651) 23005 fax. 33632</p2>
             </div>
             <div class="row">
-                <p2>e-mail : bps1100@bps.go.id</p2>
+                <p2 class="ml-3">e-mail : bps1100@bps.go.id</p2>
             </div>
 
             <div class="row justify-content-center mt-1">
