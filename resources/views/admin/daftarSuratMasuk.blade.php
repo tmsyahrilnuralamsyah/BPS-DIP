@@ -61,13 +61,49 @@
                             <td>{{ $b->tanggalSm }}</td>
                             <td>{{ $b->ringkasM }}</td>
                             <td>{{ $b->tanggalDiterima }}</td>
-                            {{-- <td>
-                                @foreach($b->disposisi as $dis)
-                                    <li>{{ $dis }}</li>
-                                @endforeach
-                            </td> --}}
-                            <td>{{ $b->disposisi }}</td>
-                            <td>{{ $b->ketDisposisi }}</td>
+                            <td>
+                                @if (strpos($b->disposisi, "KABAG UMUM"))
+                                    <li>KABAG UMUM</li>
+                                @endif
+                                @if (strpos($b->disposisi, "Koordinator Fungsi STAT. SOSIAL"))
+                                    <li>Koordinator Fungsi STAT. SOSIAL</li>
+                                @endif
+                                @if (strpos($b->disposisi, "Koordinator Fungsi STAT. PRODUKSI"))
+                                    <li>Koordinator Fungsi STAT. PRODUKSI</li>
+                                @endif
+                                @if (strpos($b->disposisi, "Koordinator Fungsi DTAT. DISTRIBUSI"))
+                                    <li>Koordinator Fungsi DTAT. DISTRIBUSI</li>
+                                @endif
+                                @if (strpos($b->disposisi, "Koordinator Fungsi CAWILIS"))
+                                    <li>Koordinator Fungsi CAWILIS</li>
+                                @endif
+                                @if (strpos($b->disposisi, "Koordinator Fungsi IPDS"))
+                                    <li>Koordinator Fungsi IPDS</li>
+                                @endif
+                                @if (strpos($b->disposisi, "KORPRI"))
+                                    <li>KORPRI</li>
+                                @endif
+                            </td>
+                            <td>
+                                @if (strpos($b->ketDisposisi, "hp"))
+                                    <li>Harap diproses</li>
+                                @endif
+                                @if (strpos($b->ketDisposisi, "pms"))
+                                    <li>Penuhi maksud surat</li>
+                                @endif
+                                @if (strpos($b->ketDisposisi, "hj"))
+                                    <li>Harap dijawab</li>
+                                @endif
+                                @if (strpos($b->ketDisposisi, "pk"))
+                                    <li>Periksa kebenarannya</li>
+                                @endif
+                                @if (strpos($b->ketDisposisi, "tpy"))
+                                    <li>Teruskan pada ybs.</li>
+                                @endif
+                                @if (strpos($b->ketDisposisi, "um"))
+                                    <li>Untuk dimaklumi</li>
+                                @endif
+                            </td>
                             <td>{{ $b->noteDisposisi }}</td>
                             <td>{{ $b->catDisposisi }}</td>
                             <td>{{ $b->catDisposisi2 }}</td>

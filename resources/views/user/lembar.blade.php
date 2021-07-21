@@ -103,13 +103,13 @@
                         <div class="col-xl-5 col-lg-12 col-md-12">
                             <label>Disposisi</label><br>
                             <div class="border border-dark ml-3 p-2">
-                                <input type="checkbox" id="disposisi" name="disposisi[]" value="KABAG UMUM" {{ ($books->disposisi == 'KABAG UMUM' ? ' checked' : '') }}/> KABAG UMUM <br>
-                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. SOSIAL" {{ ($books->disposisi == 'Koordinator Fungsi STAT. SOSIAL' ? ' checked' : '') }}/> Koordinator Fungsi STAT. SOSIAL <br>
-                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. PRODUKSI" {{ ($books->disposisi == 'Koordinator Fungsi STAT. PRODUKSI' ? ' checked' : '') }}/> Koordinator Fungsi STAT. PRODUKSI <br>
-                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi DTAT. DISTRIBUSI" {{ ($books->disposisi == 'Koordinator Fungsi DTAT. DISTRIBUSI' ? ' checked' : '') }}/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
-                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi CAWILIS" {{ ($books->disposisi == 'Koordinator Fungsi CAWILIS' ? ' checked' : '') }}/> Koordinator Fungsi CAWILIS <br>
-                        <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi IPDS" {{ ($books->disposisi == 'Koordinator Fungsi IPDS' ? ' checked' : '') }}/> Koordinator Fungsi IPDS <br>
-                        <input type="checkbox" id="disposisi" name="disposisi[]" value="KORPRI" {{ ($books->disposisi == 'KORPRI' ? ' checked' : '') }}/> KORPRI <br>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="KABAG UMUM" {{ (strpos($books->disposisi, "KABAG UMUM") ? ' checked' : '') }}/> KABAG UMUM <br>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. SOSIAL" {{ (strpos($books->disposisi, "Koordinator Fungsi STAT. SOSIAL") ? ' checked' : '') }}/> Koordinator Fungsi STAT. SOSIAL <br>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. PRODUKSI" {{ (strpos($books->disposisi, "Koordinator Fungsi STAT. PRODUKSI") ? ' checked' : '') }}/> Koordinator Fungsi STAT. PRODUKSI <br>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi DTAT. DISTRIBUSI" {{ (strpos($books->disposisi, "Koordinator Fungsi DTAT. DISTRIBUSI") ? ' checked' : '') }}/> Koordinator Fungsi DTAT. DISTRIBUSI <br>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi CAWILIS" {{ (strpos($books->disposisi, "Koordinator Fungsi CAWILIS") ? ' checked' : '') }}/> Koordinator Fungsi CAWILIS <br>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi IPDS" {{ (strpos($books->disposisi, "Koordinator Fungsi IPDS") ? ' checked' : '') }}/> Koordinator Fungsi IPDS <br>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="KORPRI" {{ (strpos($books->disposisi, "KORPRI") ? ' checked' : '') }}/> KORPRI <br>
                             </div>
                             @if($errors->has('disposisi'))
                                 <div class="text-danger">
@@ -120,12 +120,12 @@
                         <div class="col-xl-5 col-lg-12 col-md-12">
                             <label>Keterangan Disposisi</label><br>
                             <div class="border border-dark ml-3 p-2">
-                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="hp" {{ ($books->ketDisposisi == 'hp' ? ' checked' : '') }}/> Harap diproses <br>
-                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="pms" {{ ($books->ketDisposisi == 'pms' ? ' checked' : '') }}/> Penuhi maksud surat <br>
-                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="hj" {{ ($books->ketDisposisi == 'hj' ? ' checked' : '') }}/> Harap dijawab <br>
-                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="pk" {{ ($books->ketDisposisi == 'pk' ? ' checked' : '') }}/> Periksa kebenarannya <br>
-                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="tpy" {{ ($books->ketDisposisi == 'tpy' ? ' checked' : '') }}/> Teruskan pada ybs. <br>
-                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="um" {{ ($books->ketDisposisi == 'um' ? ' checked' : '') }}/> Untuk dimaklumi <br>
+                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="hp" {{ (strpos($books->ketDisposisi, "hp") ? ' checked' : '') }}/> Harap diproses <br>
+                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="pms" {{ (strpos($books->ketDisposisi, "pms") ? ' checked' : '') }}/> Penuhi maksud surat <br>
+                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="hj" {{ (strpos($books->ketDisposisi, "hj") ? ' checked' : '') }}/> Harap dijawab <br>
+                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="pk" {{ (strpos($books->ketDisposisi, "pk") ? ' checked' : '') }}/> Periksa kebenarannya <br>
+                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="tpy" {{ (strpos($books->ketDisposisi, "tpy") ? ' checked' : '') }}/> Teruskan pada ybs. <br>
+                                <input type="checkbox" id="ketDisposisi" name="ketDisposisi[]" value="um" {{ (strpos($books->ketDisposisi, "um") ? ' checked' : '') }}/> Untuk dimaklumi <br>
                             </div>
                         </div>
                     </div>
