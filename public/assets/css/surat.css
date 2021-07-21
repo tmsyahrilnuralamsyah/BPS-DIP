@@ -168,10 +168,6 @@ table {
     /* width: 14.8cm;
     min-height: 21cm; */
 
-    /* Margin per single side of the page */
-    /* padding-left: 1cm;
-    padding-top: 0.5cm;
-    padding-right: 14cm;
-    padding-bottom: 0.5cm; */
-    margin-right: 3cm;
+    /* Margin of the page */
+    margin-right: 2.5cm;
 }

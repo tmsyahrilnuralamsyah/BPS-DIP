@@ -129,25 +129,25 @@
                     <div class="row">
                         <div class="col-1">
                             <div class="row mt-1">
-                                <input type="checkbox" id="disposisi" name="disposisi" value="KABAG UMUM"/>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="KABAG UMUM" {{ ($books->disposisi == 'KABAG UMUM' ? ' checked' : '') }}/>
                             </div>
                             <div class="row mt-1">
-                                <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi STAT. SOSIAL"/>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. SOSIAL" {{ ($books->disposisi == 'Koordinator Fungsi STAT. SOSIAL' ? ' checked' : '') }}/>
                             </div>
                             <div class="row mt-1">
-                                <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi STAT. PRODUKSI"/>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi STAT. PRODUKSI" {{ ($books->disposisi == 'Koordinator Fungsi STAT. PRODUKSI' ? ' checked' : '') }}/>
                             </div>
                             <div class="row mt-1">
-                                <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi DTAT. DISTRIBUSI"/>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi DTAT. DISTRIBUSI" {{ ($books->disposisi == 'Koordinator Fungsi DTAT. DISTRIBUSI' ? ' checked' : '') }}/>
                             </div>
                             <div class="row mt-1">
-                                <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi CAWILIS"/>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi CAWILIS" {{ ($books->disposisi == 'Koordinator Fungsi CAWILIS' ? ' checked' : '') }}/>
                             </div>
                             <div class="row mt-1">
-                                <input type="checkbox" id="disposisi" name="disposisi" value="Koordinator Fungsi IPDS"/>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="Koordinator Fungsi IPDS" {{ ($books->disposisi == 'Koordinator Fungsi IPDS' ? ' checked' : '') }}/>
                             </div>
                             <div class="row mt-1">
-                                <input type="checkbox" id="disposisi" name="disposisi" value="KORPRI"/>
+                                <input type="checkbox" id="disposisi" name="disposisi[]" value="KORPRI" {{ ($books->disposisi == 'KORPRI' ? ' checked' : '') }}/>
                             </div>
                         </div>
                         <div class="col">
@@ -155,29 +155,29 @@
                                 <div class="row ml-1">
                                     <div class="col-6">
                                         <div class="row">
-                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="hp"/>
+                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi[]" value="hp" {{ ($books->ketDisposisi == 'hp' ? ' checked' : '') }}/>
                                             <p2>Harap diproses</p2>
                                         </div>
                                         <div class="row">
-                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="pms"/>
+                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi[]" value="pms" {{ ($books->ketDisposisi == 'pms' ? ' checked' : '') }}/>
                                             <p2>Penuhi maksud surat</p2>
                                         </div>
                                         <div class="row">
-                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="hj"/>
+                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi[]" value="hj" {{ ($books->ketDisposisi == 'hj' ? ' checked' : '') }}/>
                                             <p2>Harap dijawab</p2>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="row">
-                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="pk"/>
+                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi[]" value="pk" {{ ($books->ketDisposisi == 'pk' ? ' checked' : '') }}/>
                                             <p2>Periksa kebenarannya</p2>
                                         </div>
                                         <div class="row">
-                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="tpy"/>
+                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi[]" value="tpy" {{ ($books->ketDisposisi == 'tpy' ? ' checked' : '') }}/>
                                             <p2>Teruskan pada ybs.</p2>
                                         </div>
                                         <div class="row">
-                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi" value="um"/>
+                                            <input type="checkbox" class="mt-1 mr-1" id="ketDisposisi" name="ketDisposisi[]" value="um" {{ ($books->ketDisposisi == 'um' ? ' checked' : '') }}/>
                                             <p2>Untuk dimaklumi</p2>
                                         </div>
                                     </div>
