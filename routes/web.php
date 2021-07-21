@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
-use App\Http\Controllers\Book2Controller;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,15 +36,15 @@ Route::get('/admin/hapusSuratMasuk/{id}', [BookController::class, 'hapusSuratMas
 Route::get('/admin/daftarSuratMasuk/cari', [BookController::class, 'cariSuratMasuk'])->name('carisuratmasuk');
 Route::get('/admin/cetak/{id}', [BookController::class, 'cetakSuratMasuk'])->name('cetaksuratmasuk');
 
-Route::get('/user/login', [BookController::class, 'showUserLogin'])->name('userlogin');
-Route::post('/user/login', [BookController::class, 'doUserLogin'])->name('userlogin');
-Route::get('/user/lembar/{noTm}', [BookController::class, 'userLembar'])->name('userlembar');
-Route::put('/user/lembar/{id}', [BookController::class, 'userLembar2'])->name('userlembar');
+Route::get('/admin/daftarSuratKeluar', [BookController::class, 'daftarSuratKeluar'])->name('daftarsuratkeluar');
+Route::get('/admin/suratKeluar', [BookController::class, 'suratKeluar'])->name('suratkeluar');
+Route::post('/admin/tambahSuratKeluar', [BookController::class, 'tambahSuratKeluar'])->name('tambahsuratkeluar');
+Route::get('/admin/editSuratKeluar/{id}', [BookController::class, 'editSuratKeluar'])->name('editsuratkeluar');
+Route::put('/admin/editSuratKeluar/{id}', [BookController::class, 'editSuratKeluar2'])->name('editsuratkeluar');
+Route::get('/admin/hapusSuratKeluar/{id}', [BookController::class, 'hapusSuratKeluar'])->name('hapussuratkeluar');
+Route::get('/admin/daftarSuratKeluar/cari', [BookController::class, 'cariSuratKeluar'])->name('carisuratkeluar');
 
-Route::get('/admin/daftarSuratKeluar', [Book2Controller::class, 'daftarSuratKeluar'])->name('daftarsuratkeluar');
-Route::get('/admin/suratKeluar', [Book2Controller::class, 'suratKeluar'])->name('suratkeluar');
-Route::post('/admin/tambahSuratKeluar', [Book2Controller::class, 'tambahSuratKeluar'])->name('tambahsuratkeluar');
-Route::get('/admin/editSuratKeluar/{id}', [Book2Controller::class, 'editSuratKeluar'])->name('editsuratkeluar');
-Route::put('/admin/editSuratKeluar/{id}', [Book2Controller::class, 'editSuratKeluar2'])->name('editsuratkeluar');
-Route::get('/admin/hapusSuratKeluar/{id}', [Book2Controller::class, 'hapusSuratKeluar'])->name('hapussuratkeluar');
-Route::get('/admin/daftarSuratKeluar/cari', [Book2Controller::class, 'cariSuratKeluar'])->name('carisuratkeluar');
+Route::get('/user/login', [UserController::class, 'showUserLogin'])->name('userlogin');
+Route::post('/user/login', [UserController::class, 'doUserLogin'])->name('userlogin');
+Route::get('/user/lembar/{noTm}', [UserController::class, 'userLembar'])->name('userlembar');
+Route::put('/user/lembar/{id}', [UserController::class, 'userLembar2'])->name('userlembar');

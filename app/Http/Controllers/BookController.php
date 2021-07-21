@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Crypt;
 use App\Models\Book;
 use App\Models\Book2;
 use Carbon\Carbon;
@@ -121,49 +120,75 @@ class BookController extends Controller
         return view('admin.cetak', ['books' => $book]);
     }
 
-    public function showUserLogin()
+    public function daftarSuratKeluar()
     {
-        return view('user.login');
+    	$book = Book2::orderBy('id', 'desc')->paginate(10);
+    	return view('admin.daftarSuratKeluar', ['books' => $book]);
     }
 
-    public function doUserLogin(Request $request)
+    public function suratKeluar()
     {
-        $request->validate([
-            'noTm' => 'required',
-            'kode' => 'required'
-        ]);
-
-        if (Book::where('noTm', $request->noTm)->where('kode', $request->kode)->first()) {
-            return redirect(route("userlembar", Crypt::encryptString($request->noTm)));
-        } else {
-            return redirect()->back()->with('message', 'nomor surat atau kode admin salah.')->withInput();
-        }
+        return view('admin.suratKeluar');
     }
 
-    public function userLembar($noTm)
-    {
-        $noTm = Crypt::decryptString($noTm);
-        $book = Book::where('noTm', $noTm)->first();
-        return view('user.lembar', ['books' => $book]);
-    }
-
-    public function userLembar2($id, Request $request)
+    public function tambahSuratKeluar(Request $request)
     {
         $this->validate($request,[
-            'disposisi' => 'required',
-            'ketDisposisi' => 'required',
-            'noteDisposisi' => 'required',
-            'catDisposisi' => 'required',
-            'catDisposisi2' => 'required'
+            'noTk' => 'required',
+            'ringkasK' => 'required',
+            'alamatK' => 'required',
+            'tanggalK' => 'required',
+            'ketKeluar' => 'required'
+    	]);
+
+        Book2::create([
+            'noTk' => $request->noTk,
+            'ringkasK' => $request->ringkasK,
+            'alamatK' => $request->alamatK,
+            'tanggalK' => $request->tanggalK,
+            'ketKeluar' => $request->ketKeluar
+    	]);
+
+    	return redirect()->back()->with('alert', 'Data telah tersimpan')->withInput();
+    }
+
+    public function editSuratKeluar($id)
+    {
+        $book = Book2::find($id);
+        return view('admin.editSuratKeluar', ['books' => $book]);
+    }
+
+    public function editSuratKeluar2($id, Request $request)
+    {
+        $this->validate($request,[
+            'noTk' => 'required',
+            'ringkasK' => 'required',
+            'alamatK' => 'required',
+            'tanggalK' => 'required',
+            'ketKeluar' => 'required'
         ]);
 
-        $book = Book::find($id);
-        $book->disposisi = $request->disposisi;
-        $book->ketDisposisi = $request->ketDisposisi;
-        $book->noteDisposisi = $request->noteDisposisi;
-        $book->catDisposisi = $request->catDisposisi;
-        $book->catDisposisi2 = $request->catDisposisi2;
+        $book = Book2::find($id);
+        $book->noTk = $request->noTk;
+        $book->ringkasK = $request->ringkasK;
+        $book->alamatK = $request->alamatK;
+        $book->tanggalK = $request->tanggalK;
+        $book->ketKeluar = $request->ketKeluar;
         $book->save();
-        return redirect()->back()->with('alert', 'Data telah tersimpan')->withInput();
+        return redirect(route('daftarsuratkeluar'));
+    }
+
+    public function hapusSuratKeluar($id)
+    {
+        $book = Book2::find($id);
+        $book->delete();
+        return redirect(route('daftarsuratkeluar'));
+    }
+
+    public function cariSuratKeluar(Request $request)
+    {
+        $cari = $request->cari;
+		$book = DB::table('books2')->where('noTk','like',"%".$cari."%")->paginate();
+		return view('admin.daftarSuratKeluar',['books' => $book]);
     }
 }
