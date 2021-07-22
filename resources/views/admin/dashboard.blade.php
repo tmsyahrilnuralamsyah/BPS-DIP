@@ -125,7 +125,7 @@
 
         }, {
             name: 'Surat Keluar',
-            data: [1, 3, 5, 4, 2, 8, 1]
+            data: {!! json_encode($dataKeluar) !!}
         }]
     });
 </script>
