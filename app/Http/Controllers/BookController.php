@@ -23,7 +23,7 @@ class BookController extends Controller
         for($i = 6; $i >= 0; $i--) {
             $categories[] = Carbon::today()->subDays($i)->locale('id')->isoFormat('dddd, D MMMM Y');
             $dataMasuk[] = Book::whereDate('created_at', Carbon::today()->subDays($i))->count();
-            $dataKeluar[] = Book::whereDate('created_at', Carbon::today()->subDays($i))->count();
+            $dataKeluar[] = Book2::whereDate('created_at', Carbon::today()->subDays($i))->count();
         }
 
         return view('admin.dashboard', ['book1' => $book1, 'book2' => $book2, 'book3' => $book3, 'book4' => $book4, 'categories' => $categories, 'dataMasuk' => $dataMasuk, 'dataKeluar' => $dataKeluar]);
