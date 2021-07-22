@@ -78,11 +78,55 @@
         <div class="card shadow mb-4">
             <!-- Card Body -->
             <div class="card-body">
-                <div class="chart-bar" style="position: relative; height:70vh; width:80vw">
-                    <canvas id="myBarChart" width="1" height="1"></canvas>
-                </div>
+                <div id="chart-bar"></div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('bar')
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+    Highcharts.chart('chart-bar', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Surat Masuk dan Keluar'
+        },
+        xAxis: {
+            categories: {!! json_encode($categories) !!},
+            crosshair: true
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Jumlah'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px"><b>{point.key}</b></span><table>',
+            pointFormat: '<tr><td style="padding:0">{series.name}</td>' +
+                '<td style="padding:0">: {point.y}</td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Surat Masuk',
+            data: {!! json_encode($dataMasuk) !!}
+
+        }, {
+            name: 'Surat Keluar',
+            data: [1, 3, 5, 4, 2, 8, 1]
+        }]
+    });
+</script>
 @endsection

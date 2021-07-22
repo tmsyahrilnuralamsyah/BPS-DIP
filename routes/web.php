@@ -20,10 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => 'guest'], function () {
-    Route::get('/admin/login', [AdminController::class, 'showLogin'])->name('adminlogin');
-    Route::post('/admin/login', [AdminController::class, 'doLogin'])->name('adminlogin');
-});
+Route::get('/admin/login', [AdminController::class, 'showLogin'])->name('adminlogin');
+Route::post('/admin/login', [AdminController::class, 'doLogin'])->name('adminlogin');
 Route::get('/admin/logout', [AdminController::class, 'logout'])->name('adminlogout');
 
 Route::get('/admin/dashboard', [BookController::class, 'dashboard'])->name('admindashboard');
