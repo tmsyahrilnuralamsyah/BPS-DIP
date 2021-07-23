@@ -146,7 +146,7 @@ class AdminController extends Controller
     public function cariSuratMasuk(Request $request)
     {
         $cari = $request->cari;
-		$book = DB::table('books')->where('noTm','like',"%".$cari."%")->paginate();
+		$book = DB::table('books')->where('noTm','like',"%".$cari."%")->paginate(10);
 		return view('admin.daftarSuratMasuk',['books' => $book]);
     }
 
@@ -224,7 +224,7 @@ class AdminController extends Controller
     public function cariSuratKeluar(Request $request)
     {
         $cari = $request->cari;
-		$book = DB::table('books2')->where('noTk','like',"%".$cari."%")->paginate();
+		$book = DB::table('books2')->where('noTk','like',"%".$cari."%")->paginate(10);
 		return view('admin.daftarSuratKeluar',['books' => $book]);
     }
 }
