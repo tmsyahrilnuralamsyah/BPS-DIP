@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark topbar static-top shadow">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-                <button onclick="printContent('pdf')" class="btn btn-primary px-5 mr-5">Download</button>
+                <button onclick="printContent('pdf')" class="btn btn-primary px-5 mr-xl-5 mr-md-2">Download</button>
             </li>
         </ul>
     </nav>
