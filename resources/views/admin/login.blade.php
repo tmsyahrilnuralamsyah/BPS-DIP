@@ -53,6 +53,7 @@
                                         </div>
                                         <button type="submit" class="btn btn-primary btn-user btn-block my-5">Login</button>
                                     </form>
+                                    <a href="/" class="badge badge-warning">Home</a>
                                 </div>
                             </div>
                         </div>

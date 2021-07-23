@@ -21,10 +21,8 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         <ul class="navbar-nav sidebar sidebar-dark accordion" style="background-color: #00004d" id="accordionSidebar">
-
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route("admindashboard") }}">
                 <div class="sidebar-brand-icon">
@@ -35,7 +33,6 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ route("admindashboard") }}">
@@ -79,20 +76,16 @@
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <div class="nav-link dropdown-toggle">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">admin</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
                                 <img class="img-profile rounded-circle"
                                     src="{{ asset('assets/img/profil.png') }}">
                             </div>

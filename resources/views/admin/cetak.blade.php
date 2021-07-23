@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="col-3">
-                    <img src="{{ asset('assets/img/sensus.jpeg') }}" style="width: 100px;" alt="">
+                    {{-- <img src="{{ asset('assets/img/sensus.jpeg') }}" style="width: 100px;" alt=""> --}}
                 </div>
             </div>
 
