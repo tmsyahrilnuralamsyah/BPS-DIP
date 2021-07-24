@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark topbar static-top shadow">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown no-arrow">
-                <a href="{{ route("userlogin") }}" class="btn btn-primary px-5 mr-5">Logout</a>
+                <a href="{{ route("userlogin") }}" class="btn btn-primary px-5 mr-xl-5 mr-md-2">Logout</a>
             </li>
         </ul>
     </nav>

@@ -18,7 +18,7 @@
     <title>BPS DIP</title>
 </head>
 <body style="background-color: #00004d; background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(38, 38, 168) 100%);">
-    <div class="container mt-3">
+    <div class="container mt-2">
         <!-- Outer Row -->
         <div class="row justify-content-center">
             <div class="col-xl-10 col-lg-12 col-md-9 my-4">
