@@ -51,7 +51,7 @@
                 <tbody>
                     @foreach($books as $b)
                         <tr>
-                            <td><a href="/admin/cetak/{{ $b->id }}" target="_blank" style="color: blue">{{ $b->noTm }}</a></td>
+                            <td><a href="/admin/cetak/{{ $b->id }}" target="_blank" class="badge badge-info" style="color: white">{{ $b->noTm }}</a></td>
                             <td>{{ $b->pengirim }}</td>
                             <td>{{ $b->noSm }}</td>
                             <td>{{ $b->tanggalSm }}</td>
