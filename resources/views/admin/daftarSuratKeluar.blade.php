@@ -29,26 +29,26 @@
             <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead class="thead-dark">
                     <tr class="text-center">
-                        <th>Ubah/Hapus</th>
                         <th>Nomor Terturut</th>
                         <th>Isi Ringkas</th>
                         <th>Alamat</th>
                         <th>Tanggal</th>
                         <th>Keterangan</th>
+                        <th>Ubah/Hapus</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($books as $b)
                         <tr>
-                            <td class="text-center">
-                                <a href="{{ route("editsuratkeluar", $b->id) }}" class="btn btn-warning my-1">Ubah</a>
-                                <a href="{{ route("hapussuratkeluar", $b->id) }}" class="btn btn-danger my-1">Hapus</a>
-                            </td>
                             <td>{{ $b->noTk }}</td>
                             <td>{{ $b->ringkasK }}</td>
                             <td>{{ $b->alamatK }}</td>
                             <td>{{ $b->tanggalK }}</td>
                             <td>{{ $b->ketKeluar }}</td>
+                            <td class="text-center">
+                                <a href="{{ route("editsuratkeluar", $b->id) }}" class="btn btn-warning my-1">Ubah</a>
+                                <a href="{{ route("hapussuratkeluar", $b->id) }}" class="btn btn-danger my-1">Hapus</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

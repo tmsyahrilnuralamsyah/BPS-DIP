@@ -29,7 +29,6 @@
             <table class="table table-bordered table-striped" id="dataTable" width="100%" cellspacing="0">
                 <thead class="thead-dark">
                     <tr class="text-center">
-                        <th class="px-5">Ubah/Hapus</th>
                         <th class="px-5">Nomor Terturut</th>
                         <th class="px-5">Pengirim</th>
                         <th class="px-5">
@@ -46,15 +45,12 @@
                         <th class="px-5">Disposisi KABAG/KOOR</th>
                         <th class="px-5">Disposisi KASUBAG/KOOR</th>
                         <th class="px-4">Kode Admin</th>
+                        <th class="px-5">Ubah/Hapus</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($books as $b)
                         <tr>
-                            <td class="text-center">
-                                <a href="{{ route("editsuratmasuk", $b->id) }}" class="btn btn-warning my-1">Ubah</a>
-                                <a href="{{ route("hapussuratmasuk", $b->id) }}" class="btn btn-danger my-1">Hapus</a>
-                            </td>
                             <td><a href="/admin/cetak/{{ $b->id }}" target="_blank" style="color: blue">{{ $b->noTm }}</a></td>
                             <td>{{ $b->pengirim }}</td>
                             <td>{{ $b->noSm }}</td>
@@ -108,6 +104,10 @@
                             <td>{{ $b->catDisposisi }}</td>
                             <td>{{ $b->catDisposisi2 }}</td>
                             <td>{{ $b->kode }}</td>
+                            <td class="text-center">
+                                <a href="{{ route("editsuratmasuk", $b->id) }}" class="btn btn-warning my-1">Ubah</a>
+                                <a href="{{ route("hapussuratmasuk", $b->id) }}" class="btn btn-danger my-1">Hapus</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
