@@ -30,7 +30,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/admin/tambahSuratMasuk', [AdminController::class, 'tambahSuratMasuk'])->name('tambahsuratmasuk');
     Route::get('/admin/editSuratMasuk/{id}', [AdminController::class, 'editSuratMasuk'])->name('editsuratmasuk');
     Route::put('/admin/editSuratMasuk/{id}', [AdminController::class, 'editSuratMasuk2'])->name('editsuratmasuk');
-    Route::get('/admin/hapusSuratMasuk/{id}', [AdminController::class, 'hapusSuratMasuk'])->name('hapussuratmasuk');
+    Route::delete('/admin/hapusSuratMasuk/{id}', [AdminController::class, 'hapusSuratMasuk'])->name('hapussuratmasuk');
     Route::get('/admin/daftarSuratMasuk/cari', [AdminController::class, 'cariSuratMasuk'])->name('carisuratmasuk');
     Route::get('/admin/cetak/{id}', [AdminController::class, 'cetakSuratMasuk'])->name('cetaksuratmasuk');
 
@@ -39,7 +39,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/admin/tambahSuratKeluar', [AdminController::class, 'tambahSuratKeluar'])->name('tambahsuratkeluar');
     Route::get('/admin/editSuratKeluar/{id}', [AdminController::class, 'editSuratKeluar'])->name('editsuratkeluar');
     Route::put('/admin/editSuratKeluar/{id}', [AdminController::class, 'editSuratKeluar2'])->name('editsuratkeluar');
-    Route::get('/admin/hapusSuratKeluar/{id}', [AdminController::class, 'hapusSuratKeluar'])->name('hapussuratkeluar');
+    Route::delete('/admin/hapusSuratKeluar/{id}', [AdminController::class, 'hapusSuratKeluar'])->name('hapussuratkeluar');
     Route::get('/admin/daftarSuratKeluar/cari', [AdminController::class, 'cariSuratKeluar'])->name('carisuratkeluar');
 });
 

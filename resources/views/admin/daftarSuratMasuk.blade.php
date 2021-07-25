@@ -106,7 +106,11 @@
                             <td>{{ $b->kode }}</td>
                             <td class="text-center">
                                 <a href="{{ route("editsuratmasuk", $b->id) }}" class="btn btn-warning my-1">Ubah</a>
-                                <a href="{{ route("hapussuratmasuk", $b->id) }}" class="btn btn-danger my-1">Hapus</a>
+                                <form action="{{ route("hapussuratmasuk", $b->id) }}" method="post" onsubmit="return confirm('Apakah yakin menghapus data {{ $b->noTm }} ?')" class="d-inline">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }}
+                                    <button class="btn btn-danger my-1">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

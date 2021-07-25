@@ -34,7 +34,7 @@
                         <th>Alamat</th>
                         <th>Tanggal</th>
                         <th>Keterangan</th>
-                        <th>Ubah/Hapus</th>
+                        <th class="px-5">Ubah/Hapus</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -47,7 +47,11 @@
                             <td>{{ $b->ketKeluar }}</td>
                             <td class="text-center">
                                 <a href="{{ route("editsuratkeluar", $b->id) }}" class="btn btn-warning my-1">Ubah</a>
-                                <a href="{{ route("hapussuratkeluar", $b->id) }}" class="btn btn-danger my-1">Hapus</a>
+                                <form action="{{ route("hapussuratkeluar", $b->id) }}" method="post" onsubmit="return confirm('Apakah yakin menghapus data {{ $b->noTk }} ?')" class="d-inline">
+                                    {{ csrf_field() }}
+                                    {{ method_field('delete') }}
+                                    <button class="btn btn-danger my-1">Hapus</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
